@@ -1,4 +1,23 @@
 <?php
+/**
+ * Help function to give a list of all tables for this module
+ */
+function vals_socTables(){
+    return array(
+        'soc_agreements',
+        'soc_codes',
+        'soc_comments',
+        'soc_institutes',
+        'soc_names',
+        'soc_organisations',
+        'soc_projects',
+        'soc_proposals',
+        'soc_studentgroups',
+        'soc_student_favourites',
+        'soc_supervisor_rates',
+        'soc_user_membership'
+    );
+}
 
 /**
  * Implements Drupal hook_install().
@@ -6,12 +25,17 @@
 function vals_soc_install(){
     //If we just run a script directly on the database server before we switch
     //on this module, we just read the script and run it
+    module_load_include('inc', 'vals_soc', 'includes/module/vals_soc.roles');
     if (_INSTALL_BY_SCRIPT){
         try {
             install_by_script();
-        } catch (Exception $e){
+            create_roles();
+            create_permissions();
+            create_codes();
+        } catch (\Exception $e){
             echo $e->getMessage();
-            die('Your settings file in the vals_soc module enables the install by script (_INSTALL_BY_SCRIPT), but the application is already installed. Set it to FALSE.');
+            die('Your settings file in the vals_soc module enables the install by loading a sql script (_INSTALL_BY_SCRIPT).'.
+                  'Some error occured during execution ot the corresponding database updates..');
         }
     } else {
         //Do it the Drupal way
@@ -32,17 +56,20 @@ function vals_soc_install(){
 function install_by_script() {
   // Get the contents of the .sql file.
   $sql = file_get_contents(_VALS_SOC_ROOT. '/installation/db/drupal_soc.sql');
-  // Split into individual statements based on new lines.
-  $statements = preg_split('/[\n\r]+/', $sql);
+  // Split into individual statements based on the fact that every query ends in ; and no semicolon is used in the queries.
+  $statements = explode(';', $sql);
 
   foreach ($statements as $query) {
-    db_query($query);
+    if ($query){
+        db_query($query);
+    }
   }
 }
 /**
  * Implements hook_uninstall().
  */
 function vals_soc_uninstall() {
+  module_load_include('inc', 'vals_soc', 'includes/module/vals_soc.roles');
   $stored_vars = array(
       'vals_timeline_program_available',
       'vals_timeline_program_start_date',
@@ -75,6 +102,10 @@ function vals_soc_uninstall() {
       variable_del($var);
   }
   // Delete tables.
+    $tables = vals_socTables();
+    foreach ($tables as $t){
+        drupal_install_schema('vals_soc', $t);
+    }
     $tables = array(
         'soc_agreements',
         'soc_codes',
@@ -95,7 +126,7 @@ foreach ($tables as $table) {
             db_drop_table($table);
         }
     }
-    db_query("DELETE FROM role WHERE rid > "._USER_ROLE_ID);
+    db_query("DELETE FROM role WHERE rid > ".DRUPAL_AUTHENTICATED_RID);
     menu_cache_clear_all();
 }
 

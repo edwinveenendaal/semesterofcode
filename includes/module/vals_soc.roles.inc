@@ -15,6 +15,8 @@ define('_SOC_ROLE_ID', 14);
 
 /**
  * Function to create the custom roles needed in drupal for the summer of code programme.
+ * Note that by unistalling and installing again, the autoincrement value will be higher that the numbers above. You might want to reset the
+ * values again to these numbers to be safe.
  */
 function create_roles() {
     $roles = get_default_roles();
@@ -22,12 +24,22 @@ function create_roles() {
     foreach ($roles as $key => $value) {
         // Check that a role is not already returned.
         if (!user_role_load_by_name($key)) {
-            $role = new stdClass(); // create your Class
-            // Match values to the role Class.
-            $role->name = $key; // Used to be $value['name'], but that is reserved for a readable string in the UI
-            $role->weight = $value['weight'];
-            // Save the Role using Drupal's API.
-            user_role_save($role);
+//            $role = new stdClass(); // create your Class
+//            // Match values to the role Class.
+//            $role->name = $key; // Used to be $value['name'], but that is reserved for a readable string in the UI
+//            $role->weight = $value['weight'];
+//           //This will not work for InnoDB sql tables  $role->rid = $value['id'] ?: null;
+//            // Save the Role using Drupal's API.
+//            user_role_save($role);
+            $new_rid = db_insert('role')
+                ->fields(array('name' => $key,  'weight' =>  $value['weight']))
+                ->execute();
+             if ($new_rid != $value['id']) {
+                db_update('role')
+                  ->fields(array('rid' => $value['id']))
+                  ->condition('rid', $new_rid)
+                  ->execute();
+              }
         }
     }
 }
@@ -151,37 +163,44 @@ function get_default_roles() {
         'name' => 'Admin',
         'weight' => '2',
         'code' => 'BHTGSKKRWP'
+        ,'id' => _ADMINISTRATOR_ROLE_ID
     );
     // We need the role soc for the members of the team setting up a Semester of Code
     $roles[_SOC_TYPE] = array(
         'name' => 'Semester of Code',
         'weight' => '2',
         'code' => 'EICUN14SOC'
+         ,'id' => _SOC_ROLE_ID
     );
     $roles[_ORGADMIN_TYPE] = array(
         'name' => 'Organisation Administrator',
         'weight' => '3',
         'code' => 'AHGLL765OW'
+         ,'id' => _ORGADMIN_ROLE_ID
     );
     $roles[_SUPERVISOR_TYPE] = array(
         'name' => 'Academic Supervisor',
         'weight' => '4',
         'code' => 'MNUFD783SF'
+         ,'id' => _SUPERVISOR_ROLE_ID
     );
     $roles[_MENTOR_TYPE] = array(
         'name' => 'Mentor',
         'weight' => '5',
         'code' => 'QTU8TR44KJ'
+         ,'id' => _MENTOR_ROLE_ID
     );
     $roles[_STUDENT_TYPE] = array(
         'name' => 'Student',
         'weight' => '6',
         'code' => 'PGI99OPAQW'
+         ,'id' => _STUDENT_ROLE_ID
     );
     $roles[_INSTADMIN_TYPE] = array(
         'name' => 'Institute Responsible',
         'weight' => '2',
         'code' => 'A99ODF435W'
+         ,'id' => _INSTADMIN_ROLE_ID
     );
 
     return $roles;

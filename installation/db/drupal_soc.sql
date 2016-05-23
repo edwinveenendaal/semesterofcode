@@ -1,37 +1,3 @@
-/*
-* While we are developing can we use this file to update/build the DB 
-* rather than rewriting and adding updates to the vals_soc.install.
-* When we are nearer our final DB structure, we can write/update
-* the relevant bits in the vals_soc_schema.inc file.
-* 
-* Also we can setup the same test data (same records)
-* 
-* Summary of changes:
-* soc_codes: group_id -> studentgroup_id
-* 			org ->entity_id (maybe also 'group_id'???)
-* soc_user_membership : oid -> group_id
-* soc_projects: oid ->org_id
-* 		-student, -supervisor, + proposal_id (rationale: project table coupd be joined with proposals and if no result, there was no supervisor and/or student either)
-* soc_studentgroups ->soc_studentgroups
-* soc_proposal: oid ->org_id
-* 
-* 20-6-14:
-* 
-ALTER TABLE `soc_proposals` CHANGE `cv` `cv` MEDIUMTEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
-CHANGE `solution_short` `solution_short` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
-CHANGE `solution_long` `solution_long` MEDIUMTEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
-CHANGE `modules` `modules` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL 
-
--- 25-6-14
-ALTER TABLE `soc_projects` CHANGE `url` `url` VARCHAR( 1024 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '''''',
-CHANGE `mentor` `mentor_id` MEDIUMINT( 9 ) NOT NULL DEFAULT '0',
-CHANGE `proposal_id` `proposal_id` MEDIUMINT( 9 ) NOT NULL DEFAULT '0',
-CHANGE `tags` `tags` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT ''''''
-
--- 06-10-14
-ALTER TABLE `soc_proposals` CHANGE `state` `state` ENUM('draft','published','accepted','rejected','finished','archived','open') NOT NULL;
-*/
-
 CREATE TABLE IF NOT EXISTS `soc_agreements` (
   `agreement_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `student_id` mediumint(8) unsigned NOT NULL,
