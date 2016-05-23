@@ -11,13 +11,13 @@ drupal_add_js(_VALS_SOC_PATH .'/includes/js/render_functions.js');
 drupal_add_css(_VALS_SOC_PATH .'/includes/ui/tabs/tabs.css', array(
       'type' => 'file',
       'group' => CSS_THEME
-    ));
+));
 drupal_add_js (_VALS_SOC_PATH .'/includes/ui/tabs/activatetabs.js');
 drupal_add_js(_VALS_SOC_PATH .'/includes/js/jtable/jquery.jtable.js');
 drupal_add_css(_VALS_SOC_PATH . '/includes/js/jtable/jtable.css', array(
       'type' => 'file',
       'group' => CSS_THEME
-    ));
+));
 ctools_include('modal');
 ctools_modal_add_js();
 include(_VALS_SOC_ROOT.'/includes/pages/proposals.php');

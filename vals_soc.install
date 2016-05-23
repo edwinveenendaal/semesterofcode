@@ -11,7 +11,7 @@ function vals_soc_install(){
             install_by_script();
         } catch (Exception $e){
             echo $e->getMessage();
-            die('Your settings file in the vals_soc module enables the install by script (_INSTALL_BY_SCRIPT), but the application seems already installed. Set it to FALSE.');
+            die('Your settings file in the vals_soc module enables the install by script (_INSTALL_BY_SCRIPT), but the application is already installed. Set it to FALSE.');
         }
     } else {
         //Do it the Drupal way
@@ -90,13 +90,13 @@ function vals_soc_uninstall() {
         'soc_user_membership'
     );
     
-	foreach ($tables as $table) {
+foreach ($tables as $table) {
         if (db_table_exists($table)) {
             db_drop_table($table);
         }
     }
-	db_query("DELETE FROM role WHERE rid > "._USER_ROLE_ID);
-  	menu_cache_clear_all();
+    db_query("DELETE FROM role WHERE rid > "._USER_ROLE_ID);
+    menu_cache_clear_all();
 }
 
 function vals_soc_enable() {
@@ -162,12 +162,12 @@ function vals_soc_DONOTDOTHISupdate_7101() {
 }
 
 function vals_soc_DONOTDOTHISupdate_7102() {//every new field has description, type, not null
-	$new_field = array(
+    $new_field = array(
             'description' => 'The description of the project.',
             'type' => 'text',
             'not null' => FALSE,
-	);	
-	db_change_field('soc_projects', 'description', 'description', $new_field);
+    );	
+    db_change_field('soc_projects', 'description', 'description', $new_field);
 }
 
 function vals_soc_DONOTDOTHISupdate_7103(){
@@ -224,30 +224,31 @@ function vals_soc_update_7105() {
     );
     db_create_table('soc_student_favourites', $schema['soc_student_favourites']);
 }
+
 //The following updates have been performed in all databases
 function vals_soc__DONOTDOTHISupdate_7106(){
-	$spec = array(
-		'type' => 'enum',//DOES NOT EXIST as generic type
-		'not null' => TRUE,
-		'default' => 'draft'
-	);
-	//db_change_field('soc_proposals', 'state', 'state', $spec);
-	//ALTER TABLE `soc_proposals` CHANGE `state` `state` ENUM( 'draft', 'published', 'accepted', 'rejected', 'finished', 'archived', 'open', 'retracted' ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
-	db_query("ALTER TABLE `soc_proposals` CHANGE `state` `state` ENUM( 'draft', 'open', 'published', 'accepted', ".
-		"'rejected', 'finished', 'archived', 'retracted' ) CHARACTER SET utf8 COLLATE utf8_general_ci ".
-		"NOT NULL")->execute();
-	}
+    $spec = array(
+            'type' => 'enum',//DOES NOT EXIST as generic type
+            'not null' => TRUE,
+            'default' => 'draft'
+    );
+    //db_change_field('soc_proposals', 'state', 'state', $spec);
+    //ALTER TABLE `soc_proposals` CHANGE `state` `state` ENUM( 'draft', 'published', 'accepted', 'rejected', 'finished', 'archived', 'open', 'retracted' ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+    db_query("ALTER TABLE `soc_proposals` CHANGE `state` `state` ENUM( 'draft', 'open', 'published', 'accepted', ".
+            "'rejected', 'finished', 'archived', 'retracted' ) CHARACTER SET utf8 COLLATE utf8_general_ci ".
+            "NOT NULL")->execute();
+    }
 	
-	function vals_soc__DONOTDOTHISupdate_7107(){
-		db_query("ALTER TABLE `soc_proposals` ADD `reason` VARCHAR( 512 ) NULL COMMENT 'reason for rejection or withdraw' AFTER `state`")->execute();
-	}
-	
-	//Done in 0.5.6
-	function vals_soc__DONOTDOTHISupdate_7108(){
-		db_query("ALTER TABLE `soc_projects`".
-			"ADD COLUMN `views` SMALLINT UNSIGNED NULL DEFAULT '0' AFTER `selected`,".
-			"ADD COLUMN `likes` SMALLINT UNSIGNED NULL DEFAULT '0' AFTER `views`")->execute();
-	}
+    function vals_soc__DONOTDOTHISupdate_7107(){
+            db_query("ALTER TABLE `soc_proposals` ADD `reason` VARCHAR( 512 ) NULL COMMENT 'reason for rejection or withdraw' AFTER `state`")->execute();
+    }
+
+    //Done in 0.5.6
+    function vals_soc__DONOTDOTHISupdate_7108(){
+            db_query("ALTER TABLE `soc_projects`".
+                    "ADD COLUMN `views` SMALLINT UNSIGNED NULL DEFAULT '0' AFTER `selected`,".
+                    "ADD COLUMN `likes` SMALLINT UNSIGNED NULL DEFAULT '0' AFTER `views`")->execute();
+    }
 	
     //To be done in 0.5.7
     function vals_soc___DONOTDOTHISupdate_7109(){

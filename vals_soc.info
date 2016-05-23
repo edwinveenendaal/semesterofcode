@@ -1,7 +1,7 @@
-name = VALS summer of code
+name = VALS Semester of Code
 description = A framework which allows students to apply to complete software projects based on ideas given by organisations and mentors. Based on Googles Summer of Code (Melange)
 core = 7.x
-package = VALS Summer of code suite
+package = VALS  Semester of Code suite
 php = 5.2
 version = 7.x.1.1
 dependencies[] = date_popup

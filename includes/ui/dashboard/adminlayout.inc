@@ -1,13 +1,14 @@
 <?php
-drupal_add_css(drupal_get_path('module', 'vals_soc') . '/includes/css/dashboard/css/dashboard.css', array(
-      'type' => 'file',
-      'group' => CSS_THEME
-    ));
 
-function initDashboardLayout(){
-	
-	global $base_url;
-	echo '
+drupal_add_css(drupal_get_path('module', 'vals_soc') . '/includes/css/dashboard/css/dashboard.css', array(
+    'type' => 'file',
+    'group' => CSS_THEME
+));
+
+function initDashboardLayout() {
+
+    global $base_url;
+    echo '
 		<div class="dashboard" id="main-dashboard">
   <div class="dashboard-head">
     <span>
@@ -64,13 +65,13 @@ function initDashboardLayout(){
           </div>
         
           <div class="column-entry manage_proposals">
-            <h4><a class="dashboard-link" href="'.$base_url.'/dashboard/proposals/overview" title="Overview of proposals">
+            <h4><a class="dashboard-link" href="' . $base_url . '/dashboard/proposals/overview" title="Overview of proposals">
             Overview of proposals per state</a>
             </h4>
             <p>Lists all the proposals submitted to the program divided in tabs per state.
             </p>
             <div>
-	            <a class="dashboard-link" href="'.$base_url.'/dashboard/proposals/browse" title="Browse all proposals">
+	            <a class="dashboard-link" href="' . $base_url . '/dashboard/proposals/browse" title="Browse all proposals">
 	            Browse all proposals</a>
             </div>
             
@@ -124,7 +125,7 @@ function initDashboardLayout(){
         
           <div class="column-entry manage_organizations">
             <h4>
-              <a class="dashboard-link" href="'.$base_url.'/dashboard/members" title="Manage organizations">Manage organizations</a>
+              <a class="dashboard-link" href="' . $base_url . '/dashboard/members" title="Manage organizations">Manage organizations</a>
               
             </h4>
             <p>Manage organizations from current program. You can 
@@ -187,17 +188,17 @@ various organizations</p>
         
           <div class="column-entry program_settings">
             <h4>
-              <a class="dashboard-link" href="'.$base_url.'/dashboard/program_settings" title="Program settings">Program settings</a>
+              <a class="dashboard-link" href="' . $base_url . '/dashboard/program_settings" title="Program settings">Program settings</a>
               
             </h4>
             <p>Edit program settings and timeline</p>
             
               <div>
-                    <a href="'.$base_url.'/dashboard/program_settings/timeline" title="Edit timeline">Edit timeline</a>
+                    <a href="' . $base_url . '/dashboard/program_settings/timeline" title="Edit timeline">Edit timeline</a>
                   |
-                    <a href="'.$base_url.'/dashboard/program_settings/messages" title="Edit messages">Edit messages</a>
+                    <a href="' . $base_url . '/dashboard/program_settings/messages" title="Edit messages">Edit messages</a>
               |
-                    <a href="'.$base_url.'/dashboard/program_settings/frontpage" title="Edit frontpage">Edit messages</a>
+                    <a href="' . $base_url . '/dashboard/program_settings/frontpage" title="Edit frontpage">Edit messages</a>
               </div>
             
           </div>

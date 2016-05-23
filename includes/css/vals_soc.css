@@ -1,23 +1,23 @@
 
 html{
-	/**font-family:Verdana, Geneva, sans-serif;**/
-	}
+    /**font-family:Verdana, Geneva, sans-serif;**/
+}
 
 /*************************************************
-	CSS for for general use everywhere
+        CSS for for general use everywhere
 *************************************************/	
 
 .invisible {
-	display: none;
+    display: none;
 }
 
 label {
-	display: inline; /*in system.theme.css it is set to block */
+    display: inline; /*in system.theme.css it is set to block */
 }
 
 span.comment_author{
-	color: #2385C2;
-	font-style: italic;
+    color: #2385C2;
+    font-style: italic;
 }
 div.ctools-modal-content .form-item.form-type-textarea label {
     float: none;
@@ -25,54 +25,54 @@ div.ctools-modal-content .form-item.form-type-textarea label {
 }
 
 input[type=button]  {
-	  background-color: lightblue;
+    background-color: lightblue;
 }
 
 /*also used in the tabs class files */
 .totheright{
-	margin-left:auto;
-	margin-right:auto;
-	text-align:right; 
+    margin-left:auto;
+    margin-right:auto;
+    text-align:right; 
 }
 
 .alert {
-	color:red;
+    color:red;
 }
 
 /* These styles are used inside a modal window which is 983.7px at the moment */
 .center_bottom_relative {
-	text-align:center;
-	margin-bottom:15px;
-	margin-top:15px;
+    text-align:center;
+    margin-bottom:15px;
+    margin-top:15px;
 }
 
 .center_bottom {
-	text-align:center;
-	position:absolute;
+    text-align:center;
+    position:absolute;
     bottom:15px;
     left: 492px;
-    
-	/* TODO: something here to make the div appear at the bottom */
+
+    /* TODO: something here to make the div appear at the bottom */
 }
 
 /* necessary to get the close button relative to the messages box */
 div.messages {
-	position:relative;
+    position:relative;
 }
 .close_button {
-	line-height: 12px;
-	font-family: tahoma;
-	background-color:red;
-	font-size: 10pt;
-	padding:2px;
-	font-style:bold;
-	color:white;
+    line-height: 12px;
+    font-family: tahoma;
+    background-color:red;
+    font-size: 10pt;
+    padding:2px;
+    font-style:bold;
+    color:white;
 
-     position:absolute;
-     top:2px;
-     right:4px;
-     
- }
+    position:absolute;
+    top:2px;
+    right:4px;
+
+}
 span.lefty { padding-right:20px;}
 
 table tr th {
@@ -82,346 +82,346 @@ table tr th {
 }
 
 div.jtable-main-container table.jtable {
-	border: 1px solid #000;
+    border: 1px solid #000;
     border-collapse: separate;
 }
 
 div.jtable-main-container div.jtable-bottom-panel {
-	border: none;
+    border: none;
 }
 
 a.external {
-	background-position: right center;
+    background-position: right center;
     background-repeat: no-repeat;
     background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODI2LjQyOSAtNjk4Ljc5MSkiPjxyZWN0IHdpZHRoPSI1Ljk4MiIgaGVpZ2h0PSI1Ljk4MiIgeD0iODI2LjkyOSIgeT0iNzAyLjMwOSIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMDZjIi8+PGc+PHBhdGggZD0iTTgzMS4xOTQgNjk4Ljc5MWg1LjIzNHY1LjM5MWwtMS41NzEgMS41NDUtMS4zMS0xLjMxLTIuNzI1IDIuNzI1LTIuNjg5LTIuNjg5IDIuODA4LTIuODA4LTEuMzExLTEuMzExeiIgZmlsbD0iIzA2ZiIvPjxwYXRoIGQ9Ik04MzUuNDI0IDY5OS43OTVsLjAyMiA0Ljg4NS0xLjgxNy0xLjgxNy0yLjg4MSAyLjg4MS0xLjIyOC0xLjIyOCAyLjg4MS0yLjg4MS0xLjg1MS0xLjg1MXoiIGZpbGw9IiNmZmYiLz48L2c+PC9nPjwvc3ZnPg==');
-	padding-right: 13px;
+    padding-right: 13px;
 }
 
 /*************************************************
-	CSS for the projects views
+        CSS for the projects views
 *************************************************/	
 #project_container{
 }
 
 #project_item{	
-	border: 1px solid #f0f0f0;
-	padding: 4 4 4 4px;
-	margin: 8px;
+    border: 1px solid #f0f0f0;
+    padding: 4 4 4 4px;
+    margin: 8px;
 }
 
 #project_header{
-	padding: 4 4 4 4px;
-	margin: 8px;
-	font-weight:bold;
+    padding: 4 4 4 4px;
+    margin: 8px;
+    font-weight:bold;
 }
 
 #project_desc{
-	padding: 4 4 4 4px;
-	margin: 8px;
+    padding: 4 4 4 4px;
+    margin: 8px;
 }
 
 /*************************************************
-	CSS for the general layout of frontpage block
+        CSS for the general layout of frontpage block
 *************************************************/	
 #vals_block_content{
-	/**width: auto;**/
-    
-	width: 686px; 
-	/**overflow: hidden; width: 686px; width:100%;
- **/
+    /**width: auto;**/
+
+    width: 686px; 
+    /**overflow: hidden; width: 686px; width:100%;
+**/
 }
 #vals_block_content_bottom {
-/*    width:100%;*/
+    /*    width:100%;*/
     width: 686px; 
     position: relative;
 }
 .block-padding{
-	padding: 4 4 4 4px;
-	margin: 8px;
-	border: 1px solid black;
+    padding: 4 4 4 4px;
+    margin: 8px;
+    border: 1px solid black;
 }
 
 .block-padding-no-border{
-	padding: 4 4 4 4px;
-	margin: 8px;
+    padding: 4 4 4 4px;
+    margin: 8px;
 }
 
 .vals-intro{
-	/**width:auto;overflow: hidden;**/
-	
-	/**border: 1px solid red;**/
-	/*height: 200px;*/	
+    /**width:auto;overflow: hidden;**/
+
+    /**border: 1px solid red;**/
+    /*height: 200px;*/	
 }
 
 .block h4 {
-	/*block title*/
-	background: #6eb5e5;
-	color: #fff;
-	font-size: 15px;
-	line-height: 30px;
-	margin: 0;
-	padding: 0 0 0 7px;
-	font-weight: bold;
+    /*block title*/
+    background: #6eb5e5;
+    color: #fff;
+    font-size: 15px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0 0 0 7px;
+    font-weight: bold;
 }
 
 .block .block-content {
-	/*block content*/
-	/**overflow: hidden;**/
-	padding: 12px;
+    /*block content*/
+    /**overflow: hidden;**/
+    padding: 12px;
 }
 
 #vals_block_content  div { 
-/*    display:inline-block;*/
+    /*    display:inline-block;*/
     vertical-align: top;
 }
 
 .vals-news{
-	/**overflow: hidden;**/
-	/*width: 436px;*/
-	text-align: left;
+    /**overflow: hidden;**/
+    /*width: 436px;*/
+    text-align: left;
     display:inline-block;
     /*position:absolute;*/
     height:100%;
 }
 
 .vals-program{
-	/**overflow: hidden;float:left;**/
-	
-	width: 668px;
-	/*height: 176px;*/
-	display: inline-block;
+    /**overflow: hidden;float:left;**/
+
+    width: 668px;
+    /*height: 176px;*/
+    display: inline-block;
 }
 
 /*************************************************
-	CSS for the timeline block
+        CSS for the timeline block
 *************************************************/
 #program-map {
-	/*homepage right column*/
-	float: right;
-	width: 213px;
+    /*homepage right column*/
+    float: right;
+    width: 213px;
     min-height: 357px;
     /*display:inline-block;*/
     /*position:absolute;*/
     /*height:100%;*/
     text-align: right;
     border: none;
-	/**  border: 1px solid blue;**/
-	/*
-  
-	/ * It appears that the current height of the news block is 406 and we have to take into account the 1px top and bottom line 
-    * /
-	height: 100%;
- */
+    /**  border: 1px solid blue;**/
+    /*
+
+    / * It appears that the current height of the news block is 406 and we have to take into account the 1px top and bottom line 
+* /
+    height: 100%;
+    */
 }
 
 .block-project-timeline .block-content {
-	padding: 12px 0 0 0;
+    padding: 12px 0 0 0;
 }
 
 .block-project-timeline .block-content .block-program-timeline-new {
-	color: #2d88b8;
-	text-align: center;
+    color: #2d88b8;
+    text-align: center;
 }
 
 .block-project-timeline .block-content .block-program-timeline-new .timeline-head {
-  min-height: 48px;
+    min-height: 48px;
 }
 
 .block-project-timeline .block-content .block-program-timeline-new .timeline-head .title {
-	font-size: 12px;
-	font-weight: bold;
-	padding: 9px 0 0;
-	white-space: nowrap;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 9px 0 0;
+    white-space: nowrap;
 }
 
 .block-project-timeline .block-content .block-program-timeline-new .timeline-head .timerange {
-	font-size: 12.04px;
-	text-transform: uppercase;
-	font-weight: bold;
-	padding: 1px 0 0;
+    font-size: 12.04px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1px 0 0;
 }
 
 .block-project-timeline .block-content .block-program-timeline-new .timeline-body {
-	height: 150px;
-	width: 187px;
-	margin: 0 auto;
+    height: 150px;
+    width: 187px;
+    margin: 0 auto;
 }
 
 .block-project-timeline .block-content .block-project-timeline-countdown {
-	margin-top: 10px;
-	text-align: center;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .block-project-timeline .block-content .block-project-timeline-countdown .deadline {
-	color: #3ba3dc;
-	display: block;
-	line-height: 1.2em;
-	font-size: 12.04px;
+    color: #3ba3dc;
+    display: block;
+    line-height: 1.2em;
+    font-size: 12.04px;
 }
 
 .block-project-timeline .block-content .block-project-timeline-countdown .countdown {
-	color: #D5620E;
-	display: block;
-	font-size: 12px;
-	margin: 10px 0 15px 0;
+    color: #D5620E;
+    display: block;
+    font-size: 12px;
+    margin: 10px 0 15px 0;
 }
 
 /*************************************************
-	CSS for the live countdown (in the timeline block)
+        CSS for the live countdown (in the timeline block)
 *************************************************/
 
 .is-countdown {
-	/**border: 1px solid #ccc;**/
-	background-color: #eeeff;
+    /**border: 1px solid #ccc;**/
+    background-color: #eeeff;
 }
 
 .countdown-rtl {
-	direction: rtl;
+    direction: rtl;
 }
 
 .countdown-holding span {
-	color: #888;
+    color: #888;
 }
 
 .countdown-row {
-	clear: both;
-	width: 100%;
-	padding: 0px 2px;
-	text-align: center;
+    clear: both;
+    width: 100%;
+    padding: 0px 2px;
+    text-align: center;
 }
 
 .countdown-show1 .countdown-section {
-	width: 98%;
+    width: 98%;
 }
 
 .countdown-show2 .countdown-section {
-	width: 48%;
+    width: 48%;
 }
 
 .countdown-show3 .countdown-section {
-	width: 32.5%;
+    width: 32.5%;
 }
 
 .countdown-show4 .countdown-section {
-	width: 24.5%;
+    width: 24.5%;
 }
 
 .countdown-show5 .countdown-section {
-	width: 19.5%;
+    width: 19.5%;
 }
 .countdown-show6 .countdown-section {
-	width: 16.25%;
+    width: 16.25%;
 }
 
 .countdown-show7 .countdown-section {
-	width: 14%;
+    width: 14%;
 }
 
 .countdown-section {
-	display: block;
-	float: left;
-	text-align: center;
+    display: block;
+    float: left;
+    text-align: center;
 }
 
 .countdown-amount {
-	font-size: 100%;
+    font-size: 100%;
 }
 
 .countdown-period {
-	display: block;
+    display: block;
 }
 
 .countdown-descr {
-	display: block;
-	width: 100%;
+    display: block;
+    width: 100%;
 }
 
 /*
 Some css for
 **/
 .underline-as-drupal{
-	margin: 0 0 0.5em;
-	border-bottom: 1px solid #d6d6d6;
-	padding-bottom: 5px;
-	text-shadow: 0 1px 0 #fff;
+    margin: 0 0 0.5em;
+    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 5px;
+    text-shadow: 0 1px 0 #fff;
     font-size: 1.071em;
     line-height: 1.2;
 }
 
 /*************************************************
-	CSS for displaying a record
+        CSS for displaying a record
 *************************************************/
 .view_record dt {
-	background-color: #f0f0f0;
-	font-weight: bold;
-	margin-top: 8px;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    margin-top: 8px;
 }
 
 .view_record dd {
-	margin-top: 0px;
+    margin-top: 0px;
 }
 
 /*************************************************
-	CSS for dealing with comments
+        CSS for dealing with comments
 *************************************************/
 
 .threaded-comment-wrapper .initial-threaded-comment-wrapper .threaded-comment-wrapper-top { 
-	padding-left: 6px;
+    padding-left: 6px;
     padding-top: 6px;
     padding-bottom: 6px;
-    
+
 }
 
 .threaded-comment-wrapper {
-	margin-left: 20px;
+    margin-left: 20px;
 }
 
 .threaded-comment { 
-	border: 1px solid;
+    border: 1px solid;
     border-radius: 5px;
     padding: 6px;
     margin-bottom: 6px;
 }
 
 .threaded-comment-header{
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .threaded-comment-body{
-	clear:left;
+    clear:left;
 }
 
 .reply-comment-form  { 
-	display:none; 
+    display:none; 
 }
 
 .comments-parent-container{
-	display:none; 
+    display:none; 
 }
 
 .comment-textarea {
-	border-radius: 5px;
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
-	display:block;/*reset from inline*/
-	width:100%;
-	height: 150px;
-	margin:0;/*remove defaults*/
-	padding:4px;
-	background:#f0f0f0;
-	border:1px solid #333;
-	overflow-y:auto;/*resets IE*/
-	overflow-x:hidden;/*resets IE*/
+    border-radius: 5px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    display:block;/*reset from inline*/
+    width:100%;
+    height: 150px;
+    margin:0;/*remove defaults*/
+    padding:4px;
+    background:#f0f0f0;
+    border:1px solid #333;
+    overflow-y:auto;/*resets IE*/
+    overflow-x:hidden;/*resets IE*/
 }
 
 .prop-mini-form-wrapper {
-	border: 1px solid black;
-	padding:12px;
-	margin-top:8px;
-	margin-bottom:8px;
+    border: 1px solid black;
+    padding:12px;
+    margin-top:8px;
+    margin-bottom:8px;
 }
 
 .button-spacer {
-	margin-right: 20px;
+    margin-right: 20px;
 }

@@ -10,7 +10,7 @@ drupal_add_js(_VALS_SOC_PATH .'/includes/js/jtable/jquery.jtable.js');
 drupal_add_css(_VALS_SOC_PATH . '/includes/js/jtable/jtable.css', array(
       'type' => 'file',
       'group' => CSS_THEME
-    ));
+));
 ctools_include('modal');
 ctools_modal_add_js();
 

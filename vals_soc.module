@@ -170,11 +170,11 @@ function vals_soc_form_user_profile_form_alter(&$form, &$form_state) {
  *   Array that holds the current path as returned from arg() function
  */
 function vals_soc_help($path, $arg) {
-	switch ($path) {
-		case "admin/help#soc":
-			return '<p>' . t("Show the semester of code block") . '</p>';
-			break;
-	}
+    switch ($path) {
+            case "admin/help#soc":
+                    return '<p>' . t("Show the semester of code block") . '</p>';
+                    break;
+    }
 }
 
 //***********************************************************************************
@@ -182,9 +182,9 @@ function vals_soc_help($path, $arg) {
 //***********************************************************************************
 
 function vals_soc_js_alter(&$javascript) {
-	$ckeditor_path = drupal_get_path('module', 'ckeditor');
-	//$javascript = drupal_add_js($ckeditor_path. '/includes/ckeditor.utils.js');
-	$javascript = drupal_add_js($ckeditor_path. '/ckeditor/ckeditor.js');
+    $ckeditor_path = drupal_get_path('module', 'ckeditor');
+    //$javascript = drupal_add_js($ckeditor_path. '/includes/ckeditor.utils.js');
+    $javascript = drupal_add_js($ckeditor_path. '/ckeditor/ckeditor.js');
 
   // Swap out jQuery to use an updated version of the library.
   //$javascript['misc/jquery.js']['data'] = drupal_get_path('module', 'jquery_update') . '/jquery.js';
@@ -208,14 +208,14 @@ function vals_soc_css_alter(&$css) {
  * @param unknown $params
  */
 function vals_soc_mail($key, &$message, $params) {
-	module_load_include('inc', 'vals_soc', 'includes/module/vals_soc.mail');
-	return vals_soc_mail_handler($key, $message, $params);
+    module_load_include('inc', 'vals_soc', 'includes/module/vals_soc.mail');
+    return vals_soc_mail_handler($key, $message, $params);
 }
 
 function vals_soc_init(){
     // we make sure the settings are included first and the migrate as the very last. The latter should be the last one,
     drupal_session_start();
-	module_load_include('php', 'vals_soc', 'includes/classes/ValsSocMailSystem');
+    module_load_include('php', 'vals_soc', 'includes/classes/ValsSocMailSystem');
 	
     $_SESSION['site_settings'] = array('base_url' => _WEB_URL, 'is_logged_in' => Users::isUser(), 'debug' => _DEBUG);
     drupal_add_js (_VALS_SOC_PATH .'/includes/js/js_settings.php', array('weight'=> -2));
