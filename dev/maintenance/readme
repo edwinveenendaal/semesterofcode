@@ -1,0 +1,16 @@
+If you want to switch from development to production  or make a new version live:
+1. Copy the <production_version> to <development_version> 
+	cp -rp SOURCE DEST
+2. FTP the new version to <development_version>
+3. rm <dev: symbolic link to previous_development_version>
+4. test the site by linking development to this site:
+	ln -s <development_version> dev
+ 	test at devvps.semesterofcode.com
+5. Go to the report->status page to install possible database updates
+6. Check if the site is working
+3. If ok, switch to the production site, put it in maintenance mode
+8. Remove the previous link to production (rm production2...this only removes the symbolic link)
+4. ln -s <development_version> production2
+10. Run step 5 to get the database ok
+11. Check if all fine
+12. Put site online again

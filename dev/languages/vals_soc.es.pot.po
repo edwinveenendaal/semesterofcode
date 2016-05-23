@@ -1,0 +1,2268 @@
+# $Id$
+#
+# Spanish translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  vals_soc.module: n/a
+#  vals_soc.info: n/a
+#  actions/administration_actions.php: n/a
+#  actions/comment_actions.php: n/a
+#  actions/project_actions.php: n/a
+#  actions/institute_actions.php: n/a
+#  actions/language_actions.php: n/a
+#  actions/organisation_actions.php: n/a
+#  actions/proposal_actions.php: n/a
+#  includes/functions/institutes.php: n/a
+#  includes/functions/organisations.php: n/a
+#  includes/functions/render_functions.php: n/a
+#  includes/functions/proposals.php: n/a
+#  actions/timeline_actions.php: n/a
+#  includes/classes/Groups.php: n/a
+#  includes/classes/Project.php: n/a
+#  includes/classes/Proposal.php: n/a
+#  includes/classes/ThreadedComments.php: n/a
+#  includes/module/vals_soc.handle_forms.inc: n/a
+#  includes/classes/StatelessTimeline.php: n/a
+#  includes/ui/homepage/program.inc: n/a
+#  includes/classes/ThreadUIBuilder.php: n/a
+#  includes/ui/comments/threaded_comments.inc: n/a
+#  includes/classes/Users.php: n/a
+#  includes/functions/administration.php: n/a
+#  includes/functions/projects.php: n/a
+#  includes/module/vals_soc.menus.inc: n/a
+#  includes/module/vals_soc.forms.inc: n/a
+#  includes/js/render_functions.js: n/a
+#  includes/functions/tab_functions.php: n/a
+#  includes/module/vals_soc.block.inc: n/a
+#  includes/module/vals_soc.mail.inc: n/a
+#  includes/module/vals_soc.mail_messages.inc: n/a
+#  includes/ui/administer/program_settings.inc: n/a
+#  includes/ui/dashboard/studentlayout.inc: n/a
+#  includes/ui/dashboard/instadminlayout.inc: n/a
+#  includes/ui/dashboard/supervisorlayout.inc: n/a
+#  includes/ui/dashboard/mentorlayout.inc: n/a
+#  includes/ui/dashboard/orgadminlayout.inc: n/a
+#  includes/ui/homepage/news.inc: n/a
+#  includes/ui/homepage/timeline.inc: n/a
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2014-09-30 11:51+0000\n"
+"PO-Revision-Date: 2014-09-30 13:57+0100\n"
+"Last-Translator: Edwin Veenendaal <edwin@raycom.com>\n"
+"Language-Team: Spanish <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#: vals_soc.module:53
+msgid "Grant access to administer groups, organisations and institutes."
+msgstr ""
+
+#: vals_soc.module:54
+msgid ""
+"There is an admin page where you can add, delete and edit your organisation "
+"and groups."
+msgstr ""
+
+#: vals_soc.module:59
+msgid "Grant access to register and admin projects."
+msgstr ""
+
+#: vals_soc.module:60
+msgid "Typically for mentors and organisation admins."
+msgstr ""
+
+#: vals_soc.module:65
+msgid "Browsing to the projects (read only)."
+msgstr ""
+
+#: vals_soc.module:66
+msgid "Non logged in users should be able to browse the projects"
+msgstr ""
+
+#: vals_soc.module:71
+msgid "Selecting a project and/or submitting a proposal."
+msgstr ""
+
+#: vals_soc.module:72
+msgid "This should be for students and perhaps for supervisors"
+msgstr ""
+
+#: vals_soc.module:77
+msgid "Editing a project to propose small amendments or suggestions."
+msgstr ""
+
+#: vals_soc.module:78
+msgid "This should be for institute admins and perhaps for supervisors"
+msgstr ""
+
+#: vals_soc.module:83
+msgid "Browsing the proposals (read only)."
+msgstr ""
+
+#: vals_soc.module:84
+msgid "Non student users should be able to browse the proposals"
+msgstr ""
+
+#: vals_soc.module:177
+msgid "Show the semester of code block"
+msgstr ""
+
+#: vals_soc.info:0
+msgid "VALS summer of code"
+msgstr ""
+
+#: vals_soc.info:0
+msgid ""
+"A framework which allows students to apply to complete software projects "
+"based on ideas given by organisations and mentors. Based on Googles Summer "
+"of Code (Melange)"
+msgstr ""
+
+#: vals_soc.info:0
+msgid "VALS Summer of code suite"
+msgstr ""
+
+#: actions/administration_actions.php:34
+msgid "Add a group to your list of student groups"
+msgstr ""
+
+#: actions/administration_actions.php:101 actions/comment_actions.php:36
+#: actions/project_actions.php:223
+msgid ""
+"There are missing arguments. Please inform the administrator of this mistake."
+msgstr ""
+
+#: actions/administration_actions.php:117 actions/project_actions.php:328
+msgid "There is no such type we can delete"
+msgstr ""
+
+#: actions/administration_actions.php:135
+msgid "Email successfully sent"
+msgstr ""
+
+#: actions/administration_actions.php:139
+msgid "Email could not be sent"
+msgstr ""
+
+#: actions/institute_actions.php:46
+msgid "Could not find the institution"
+msgstr ""
+
+#: actions/institute_actions.php:52
+msgid "No institution identifier submitted!"
+msgstr ""
+
+#: actions/language_actions.php:30
+msgid "No word/s submitted!"
+msgstr ""
+
+#: actions/organisation_actions.php:42
+msgid "Could not find the organisation"
+msgstr ""
+
+#: actions/organisation_actions.php:48
+msgid "No organisation identifier submitted!"
+msgstr ""
+
+#: actions/project_actions.php:19
+msgid "You can only rate a project as staff member of an institute."
+msgstr ""
+
+#: actions/project_actions.php:28
+msgid "Kind regards,"
+msgstr ""
+
+#: actions/project_actions.php:30
+msgid "Recommendation from your supervisor"
+msgstr ""
+
+#: actions/project_actions.php:67
+msgid "You sent your recommendation(s)"
+msgstr ""
+
+#: actions/project_actions.php:69
+msgid "Something wrong with sending your recommendation(s): "
+msgstr ""
+
+#: actions/project_actions.php:75
+msgid "You can only rate a project as supervisor."
+msgstr ""
+
+#: actions/project_actions.php:93
+msgid "You have marked this project succesfully"
+msgstr ""
+
+#: actions/project_actions.php:93
+msgid "Something went wrong with the project rating."
+msgstr ""
+
+#: actions/project_actions.php:214
+msgid "No valid project identifier submitted!"
+msgstr ""
+
+#: actions/project_actions.php:227
+msgid "The project cannot be found"
+msgstr ""
+
+#: actions/project_actions.php:237
+msgid "Add new project"
+msgstr ""
+
+#: actions/project_actions.php:299;341
+msgid "The project could not be found"
+msgstr ""
+
+#: actions/project_actions.php:345
+msgid "The proposal could not be found"
+msgstr ""
+
+#: actions/project_actions.php:353
+msgid "Only the project owner can update its proposal status."
+msgstr ""
+
+#: actions/project_actions.php:378
+msgid "Changes successfully made."
+msgstr ""
+
+#: actions/project_actions.php:381
+msgid "There was a problem updating your project preferences."
+msgstr ""
+
+#: actions/project_actions.php:386
+msgid ""
+"You already have chosen a final proposal for this project, you cannot change "
+"it now."
+msgstr ""
+
+#: actions/proposal_actions.php:33
+msgid "You cannot apply for projects"
+msgstr ""
+
+#: actions/proposal_actions.php:45
+msgid "Only students can submit proposals"
+msgstr ""
+
+#: actions/proposal_actions.php:55
+msgid "This project could not be found"
+msgstr ""
+
+#: actions/proposal_actions.php:64
+msgid ""
+"Be aware that you have more than one proposal for this project. You better "
+"delete one of them."
+msgstr ""
+
+#: actions/proposal_actions.php:75
+msgid "Student details"
+msgstr ""
+
+#: actions/proposal_actions.php:77 includes/functions/institutes.php:7
+#: includes/functions/organisations.php:7
+#: includes/functions/render_functions.php:21
+msgid "Name"
+msgstr ""
+
+#: actions/proposal_actions.php:78 includes/functions/render_functions.php:30
+msgid "Email"
+msgstr ""
+
+#: actions/proposal_actions.php:78 includes/functions/proposals.php:64
+msgid "Institute"
+msgstr ""
+
+#: actions/proposal_actions.php:79
+msgid "First supervisor"
+msgstr ""
+
+#: actions/proposal_actions.php:87
+msgid ""
+"Not all details could be retrieved for you. You might not have been put in a "
+"student group. Contact your lecturer please."
+msgstr ""
+
+#: actions/proposal_actions.php:97;101;137;155
+msgid "You can only see your own proposals!"
+msgstr ""
+
+#: actions/proposal_actions.php:147;180;217;327
+msgid "No proposal identifier submitted!"
+msgstr ""
+
+#: actions/proposal_actions.php:194
+msgid "This proposal was already deleted!"
+msgstr ""
+
+#: actions/proposal_actions.php:200
+msgid "You can only delete your own proposals!"
+msgstr ""
+
+#: actions/proposal_actions.php:202
+msgid "We could not remove your proposal: It has already been published."
+msgstr ""
+
+#: actions/proposal_actions.php:213
+msgid "We could not remove your proposal"
+msgstr ""
+
+#: actions/proposal_actions.php:231;265
+msgid "You are not the owner of this proposal"
+msgstr ""
+
+#: actions/proposal_actions.php:316
+msgid "This proposal does not seem to exist!"
+msgstr ""
+
+#: actions/proposal_actions.php:320
+msgid "You can only view your own proposals!"
+msgstr ""
+
+#: actions/timeline_actions.php:11
+msgid "No date submitted!"
+msgstr ""
+
+#: includes/classes/Groups.php:43 includes/classes/Project.php:368
+msgid "Update requested with empty data set"
+msgstr ""
+
+#: includes/classes/Groups.php:134
+msgid "You are not authorised to perform this action"
+msgstr ""
+
+#: includes/classes/Groups.php:225;286 includes/classes/Project.php:325
+#: includes/classes/Proposal.php:150 includes/classes/ThreadedComments.php:65
+msgid "Insert requested with empty (filtered) data set"
+msgstr ""
+
+#: includes/classes/Groups.php:266
+msgid "We could not add a code."
+msgstr ""
+
+#: includes/classes/Groups.php:279
+msgid "We could not add your group. "
+msgstr ""
+
+#: includes/classes/Groups.php:324
+msgid "We could not add a code for this group."
+msgstr ""
+
+#: includes/classes/Groups.php:327
+msgid "We could not add you to this group."
+msgstr ""
+
+#: includes/classes/Groups.php:330;337
+#: includes/module/vals_soc.handle_forms.inc:456;460
+msgid "We could not add your group."
+msgstr ""
+
+#: includes/classes/Project.php:237;257;296
+msgid "You are not allowed to perform this action"
+msgstr ""
+
+#: includes/classes/Project.php:251;283
+msgid "You have no organisation yet"
+msgstr ""
+
+#: includes/classes/Project.php:356
+msgid "We could not add your project"
+msgstr ""
+
+#: includes/classes/Project.php:361
+msgid "We could not add your project. "
+msgstr ""
+
+#: includes/classes/Proposal.php:160;210
+msgid "You must be a student to submit a proposal"
+msgstr ""
+
+#: includes/classes/Proposal.php:193
+msgid "We could not add your proposal."
+msgstr ""
+
+#: includes/classes/Proposal.php:200
+msgid "Update requested with empty (filtered) data set"
+msgstr ""
+
+#: includes/classes/Proposal.php:236
+msgid "We could not update your proposal."
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:386
+msgid ""
+"Program has not started yet.  Menu options will be available after the "
+"student signup date. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:393
+msgid ""
+"Program has now started.  Menu options will be available once the student "
+"signup period begins. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:414
+msgid "Project proposals due to be evaluated by. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:422
+msgid "Students projects matched to mentors on the following date. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:430;565;704;833;980
+msgid ""
+"The list of students and projects will become visable to everyone after the "
+"following date. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:449;585;724;855;1002
+msgid "Community bonding period.  Coding starts on the following date. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:459;595;734;866;1013
+msgid "Coding period. The following is the suggested end date for coding. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:469;605;744;878;1024
+msgid "Coding period. The following is the deadline date for coding. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:479;615;754;889;1035
+#: includes/ui/homepage/program.inc:147
+msgid "The program is currently out of season."
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:483;619;758;893;1039
+msgid "No program currently active."
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:506;645;781;915
+msgid ""
+"Program has not started yet.  Menu options will be available from the "
+"following date. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:511;650;920
+msgid ""
+"Program is active, however you must wait until the following date to "
+"register your organization/s. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:516;655;925
+msgid ""
+"Enter your organisation details and project ideas. You have until the "
+"following date when you can no longer add or delete entries. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:532;671;943
+msgid ""
+"Your organisations and project ideas are now visible to other users of the "
+"system."
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:539;678;804;951
+msgid "Student signup period. Students can now submit project proposals"
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:547;686;813;960
+msgid "Please review your project applications before the following date. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:556;695;823;970
+msgid ""
+"Please ensure you have matched all students projects to mentors before the "
+"following date. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:788
+msgid ""
+"Program has started.  More menu options will be available from the following "
+"date. "
+msgstr ""
+
+#: includes/classes/StatelessTimeline.php:796
+msgid "Here you can view your organisations and see the project ideas."
+msgstr ""
+
+#: includes/classes/ThreadUIBuilder.php:31
+msgid "Comments"
+msgstr ""
+
+#: includes/classes/ThreadUIBuilder.php:36
+#: includes/ui/comments/threaded_comments.inc:28
+msgid "show"
+msgstr ""
+
+#: includes/classes/ThreadUIBuilder.php:54
+msgid "Replied on"
+msgstr ""
+
+#: includes/classes/ThreadUIBuilder.php:58
+msgid "Posted on"
+msgstr ""
+
+#: includes/classes/ThreadUIBuilder.php:119
+msgid "Post New Comment"
+msgstr ""
+
+#: includes/classes/ThreadedComments.php:88
+msgid "We could not add your comment"
+msgstr ""
+
+#: includes/classes/ThreadedComments.php:93
+msgid "We could not add your comment. "
+msgstr ""
+
+#: includes/classes/Users.php:10;131
+msgid "You cannot view this data"
+msgstr ""
+
+#: includes/classes/Users.php:274
+msgid "No valid user identifier specified"
+msgstr ""
+
+#: includes/functions/administration.php:5
+msgid "Back To Dashboard"
+msgstr ""
+
+#: includes/functions/administration.php:25
+msgid "All the groups and persons"
+msgstr ""
+
+#: includes/functions/administration.php:52
+msgid "You have not registered yourself to an institute yet. "
+msgstr ""
+
+#: includes/functions/administration.php:57
+msgid "You should be an admin member to edit this institute"
+msgstr ""
+
+#: includes/functions/administration.php:74
+msgid "You have no institute yet registered."
+msgstr ""
+
+#: includes/functions/administration.php:75
+msgid "Add your institute"
+msgstr ""
+
+#: includes/functions/administration.php:142
+msgid "The student groups of your institute"
+msgstr ""
+
+#: includes/functions/administration.php:146
+msgid "Add"
+msgstr ""
+
+#: includes/functions/administration.php:210
+msgid "The registered staff and students of your institute"
+msgstr ""
+
+#: includes/functions/administration.php:211
+msgid "Group"
+msgstr ""
+
+#: includes/functions/administration.php:269
+msgid "You have no organisation yet registered"
+msgstr ""
+
+#: includes/functions/administration.php:270
+msgid "Add your organisation"
+msgstr ""
+
+#: includes/functions/administration.php:305
+#: includes/functions/projects.php:17
+msgid "You have no organisation yet."
+msgstr ""
+
+#: includes/functions/administration.php:325
+msgid "Organisations you are involved in"
+msgstr ""
+
+#: includes/functions/administration.php:346
+msgid "All Members"
+msgstr ""
+
+#: includes/functions/administration.php:369
+msgid "You cannot see organisation members at the moment"
+msgstr ""
+
+#: includes/functions/projects.php:9
+msgid "You are not allowed to see the projects in this view."
+msgstr ""
+
+#: includes/functions/projects.php:18
+msgid "Please go to the organisation register page"
+msgstr ""
+
+#: includes/functions/projects.php:21
+msgid "You are not connected to any organisation yet."
+msgstr ""
+
+#: includes/functions/projects.php:22
+msgid "Please edit your account to connect"
+msgstr ""
+
+#: includes/functions/projects.php:38
+msgid "You have no project yet registered"
+msgstr ""
+
+#: includes/functions/projects.php:38
+msgid "There are no projects yet registered."
+msgstr ""
+
+#: includes/functions/projects.php:39
+msgid "Add a project"
+msgstr ""
+
+#: includes/functions/projects.php:58 includes/functions/proposals.php:326
+msgid "Show all"
+msgstr ""
+
+#: includes/functions/projects.php:60 includes/functions/proposals.php:328
+msgid "Show only mine"
+msgstr ""
+
+#: includes/functions/projects.php:141
+msgid "You have no projects yet"
+msgstr ""
+
+#: includes/functions/projects.php:147
+msgid "I cannot show this project. It seems empty."
+msgstr ""
+
+#: includes/functions/projects.php:165
+msgid "Are you sure you want to delete this project?"
+msgstr ""
+
+#: includes/functions/projects.php:167 includes/functions/proposals.php:49
+#: includes/functions/render_functions.php:249
+msgid "edit"
+msgstr ""
+
+#: includes/functions/projects.php:168 includes/functions/proposals.php:50
+#: includes/functions/render_functions.php:253
+msgid "delete"
+msgstr ""
+
+#: includes/functions/projects.php:196
+msgid "Tags"
+msgstr ""
+
+#: includes/functions/projects.php:197 includes/module/vals_soc.menus.inc:325
+msgid "Organisations"
+msgstr ""
+
+#: includes/functions/projects.php:199 includes/functions/proposals.php:160
+msgid "All Organisations"
+msgstr ""
+
+#: includes/functions/proposals.php:9
+msgid "You can only see this page as a student"
+msgstr ""
+
+#: includes/functions/proposals.php:15
+msgid "You have no proposal at the moment."
+msgstr ""
+
+#: includes/functions/proposals.php:16
+msgid "Please find yourself a project"
+msgstr ""
+
+#: includes/functions/proposals.php:27
+msgid "The %1$s is not known yet"
+msgstr ""
+
+#: includes/functions/proposals.php:44
+msgid "Are you sure you want to delete this proposal?"
+msgstr ""
+
+#: includes/functions/proposals.php:61 includes/module/vals_soc.forms.inc:340
+msgid "Supervisor"
+msgstr ""
+
+#: includes/functions/proposals.php:62 includes/module/vals_soc.forms.inc:341
+msgid "Mentor"
+msgstr ""
+
+#: includes/functions/proposals.php:63 includes/module/vals_soc.forms.inc:339
+msgid "Student"
+msgstr ""
+
+#: includes/functions/proposals.php:65
+msgid "Organisation"
+msgstr ""
+
+#: includes/functions/proposals.php:69 includes/js/render_functions.js:0
+msgid "Project"
+msgstr ""
+
+#: includes/functions/proposals.php:72 includes/js/render_functions.js:0
+msgid "Solution Summary"
+msgstr ""
+
+#: includes/functions/proposals.php:74
+msgid "more"
+msgstr ""
+
+#: includes/functions/proposals.php:155
+msgid "Select the proposals"
+msgstr ""
+
+#: includes/functions/proposals.php:171
+msgid "All Institutes"
+msgstr ""
+
+#: includes/functions/proposals.php:180
+msgid "All Students"
+msgstr ""
+
+#: includes/functions/proposals.php:334
+msgid "Filter by Organisation"
+msgstr ""
+
+#: includes/functions/proposals.php:337
+msgid "All My Organisations"
+msgstr ""
+
+#: includes/functions/proposals.php:440
+msgid "Filter by Group"
+msgstr ""
+
+#: includes/functions/proposals.php:443
+msgid "All My Groups"
+msgstr ""
+
+#: includes/functions/proposals.php:540;624
+msgid "Back to proposals overview"
+msgstr ""
+
+#: includes/functions/render_functions.php:79
+msgid "You"
+msgstr ""
+
+#: includes/functions/render_functions.php:96
+msgid "Owner"
+msgstr ""
+
+#: includes/functions/render_functions.php:126;139
+msgid ""
+"Alternatively click the button below to send an email containing signup "
+"instructions"
+msgstr ""
+
+#: includes/functions/render_functions.php:160
+msgid "There are no students yet"
+msgstr ""
+
+#: includes/functions/render_functions.php:169
+msgid "There are no supervisors yet in this institute"
+msgstr ""
+
+#: includes/functions/render_functions.php:206
+msgid "You have no groups yet"
+msgstr ""
+
+#: includes/functions/render_functions.php:260
+msgid "Members"
+msgstr ""
+
+#: includes/functions/tab_functions.php:23
+msgid "You canceled the delete request"
+msgstr ""
+
+#: includes/functions/tab_functions.php:26
+msgid "Loading, please wait..."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Note: This is final and irreversible."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"If instead, you want to only mark this proposal as your preferred one and "
+"still have the ability to change at a "
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "later date, then press 'cancel' and choose \"Accept interim\" instead."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "This proposal will become accepted for this project idea."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"The student and his/her supervisor will be informed by email that you have "
+"decided to select this proposal."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "This will mean all other proposals are rejected."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"All other candidate proposals will be informed by email that their proposal "
+"has now been rejected "
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "and that you have chosen another proposal as your choice of solution."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Note: This is not a final decision."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"If instead, you want to mark this proposal as your final choice, then press "
+"\"cancel\" and choose \"Accept final\" instead."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"This proposal will be flagged in the system as your interim choice for this "
+"project idea."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"You may change from this proposal to another one if a student writes a "
+"proposal which you prefer over this one. "
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"The Student and his/her supervisor will be informed by email that you have "
+"decided to select (as interim) this proposal."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"This will mean all other proposals for this project are still valid in the "
+"system. "
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"Other students will not know which candidate proposal you have chosen in the "
+"interim, "
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"but they will recieve an email to let them know it is not their own, meaning "
+"they still have a chance if they improve it."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+" Click the button below to select this proposal as your preferred interim "
+"solution."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Accept interim"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+" Click the button below to accept this proposal as your final chosen "
+"solution."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Accept final"
+msgstr ""
+
+#: includes/js/render_functions.js:0;0
+msgid "Submitted by student"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"You have selected this proposal as your final choice of solution for your "
+"project idea. You cannot change this."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"The project mentor selected this proposal as the final choice of solution "
+"for this project idea."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"You have already selected another proposal as your final choice of solution "
+"for your project idea. You cannot change this."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"The project mentor selected another proposal as the final choice of solution "
+"for this project idea."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"You have selected this proposal as your preferred interim choice of solution "
+"for your project idea. "
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"This is not final and you may change it to another proposal before the end "
+"of the student signup period."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"The project owner selected this proposal as the preferred interim choice of "
+"solution for this project idea. "
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"This is not final and the owner may change to another proposal before the "
+"end of the student signup period."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"You have already selected another proposal as your preferred choice of "
+"solution for your project idea."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"The project mentor has selected another proposal as the preferred interim "
+"choice of solution for this project idea."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"You haven't yet selected a proposal as your preferred choice of solution for "
+"your project idea."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"The project mentor hasn't yet selected a proposal as the preferred interim "
+"choice of solution for this project idea."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "You have the following two choices"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"This is the Overview tab, where you can also add comments to this proposal."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"The \"Student Details\" tab lists both the students, the institution he/she "
+"is attending and his/her supervisor."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"The \"Solution Summary\" tab is where the student was asked to provide a "
+"brief synopsis of the solution."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"The \"Solution Description\" tab is where the student was asked to provide a "
+"more detailed description of the solution."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"The \"Project\" tab is for your reference and links to the original project "
+"idea."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "The \"Status\" tab is to allow you to set the proposals current status."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"The \"Status\" tab is to allow you to view the proposals current status."
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Your Opinion"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Submit proposal for this project"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Prev"
+msgstr "Anterior"
+
+#: includes/js/render_functions.js:0
+msgid "Next"
+msgstr "Siguiente"
+
+#: includes/js/render_functions.js:0
+msgid "Recommend this project to:"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Recommend"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid ""
+"Could you or do you want to be the supervisor for this project for one of "
+"this institutes students?"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Not for me"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Maybe"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Would suit me"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Information"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Website"
+msgstr ""
+
+#: includes/js/render_functions.js:0;0
+msgid "Contact information"
+msgstr ""
+
+#: includes/js/render_functions.js:0;0;0
+msgid "Name: "
+msgstr "Nombre"
+
+#: includes/js/render_functions.js:0;0;0
+msgid "Email: "
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Institute: "
+msgstr "Instituto"
+
+#: includes/js/render_functions.js:0
+msgid "Supervisor: "
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Supervisor email: "
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Overview"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Student Details"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Solution Description"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Status"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Edit"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Delete"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Could not retrieve well the saved data"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Nothing entered yet"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Wait please"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Are you sure you want to delete this proposal?<br>"
+msgstr ""
+
+#: includes/js/render_functions.js:0
+msgid "Yes"
+msgstr ""
+
+#: includes/module/vals_soc.block.inc:6
+msgid "Semester of Code"
+msgstr ""
+
+#: includes/module/vals_soc.block.inc:12
+msgid "Add or edit groups, organisations, institutes etc."
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:25
+msgid "Complete this section"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:31
+msgid "Accepted organisations message"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:40
+msgid "Rejected organisations message"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:49
+msgid "Mentor welcome message"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:58
+msgid "Student welcome message"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:67
+msgid "Accepted students message"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:76
+msgid "Rejected students message"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:82
+msgid "Test email address"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:110
+msgid "Enable program"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:117
+msgid "Program start date"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:124
+msgid "Program end date"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:131
+msgid "Organisation signup start date"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:138
+msgid "Organisation signup end date"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:145
+msgid "Accepted organisations announced deadline"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:152
+msgid "Student signup start date"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:159
+msgid "Student signup end date"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:166
+msgid "Organisations review student applications deadline"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:173
+msgid "Students matched to mentors deadline"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:180
+msgid "Accepted students announced deadline"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:187
+msgid "Coding start date"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:194
+msgid "Coding end date"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:201
+msgid "Suggested coding deadline"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:227
+msgid "You can add your full name here"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:229;325
+msgid "(If you leave this empty, we will use your account name instead)"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:242;276;350;363
+msgid "Fill in later"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:249;357
+msgid "Select the institute you are in"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:251
+msgid "(For students and supervisors or institute administrators only)"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:261
+msgid "Type the key you got from your colleague in the institute "
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:263
+msgid "The code is for this institute only."
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:283;370
+msgid "Select the organisation you are in"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:285
+msgid "(For organisation admins and mentors only)"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:297
+msgid "Type the key you got from your colleague in the organisation "
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:299
+msgid "The code is for this organisation only."
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:323
+msgid "What is your full name?"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:337
+msgid "What is your role"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:342
+msgid "Organisation Administrator"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:343
+msgid "Institute Administrator"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:344
+msgid "Virtual Alliances Consortium member"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:346
+msgid "Select your role in Semester of Code."
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:359
+msgid "(for students and tutors only)"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:372
+msgid "(for organisation admins and mentors only)"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:381
+msgid "Type the key you got in the invitation"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:383
+msgid "This code is different per role."
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:396
+msgid "Select the language you want for Semester of Code"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:398
+msgid "This will be the default language"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:415
+msgid "What is the name of your organisation?"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:422
+msgid "Describe your organisation, if you like"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:431
+msgid "At what website can your organisation be found"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:438;495
+msgid "Who is the contact person (you?)"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:445;502
+msgid "What is the email of the contact person"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:453;510;571;668
+msgid "Save"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:467;515;576;673;767;849;887
+msgid "Cancel"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:488
+msgid "What is the name of your institute?"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:548
+msgid "Give a name to remember your student group"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:555
+msgid "Some additional note to describe the group"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:615
+msgid "For which organisation will this project be?"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:623
+msgid "The name of the project"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:630
+msgid "Describe the project"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:642
+msgid "The url of this project"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:652
+msgid ""
+"Some tags to facilitate searching (Delimited by comma i.e. php, javascript, "
+"html)"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:659
+msgid ""
+"If you want you can save the project as draft, making it visible only to "
+"members of your organisation)"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:691
+msgid ""
+"The project id has not been passed on well. Cannot continue. Please inform "
+"the system administrator"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:701
+msgid "Give a title to your proposal"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:705
+msgid "For easy communication, it is nice to have a title for your proposal"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:707
+msgid "Choose later"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:715
+msgid "Choose a supervisor for this project"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:719
+msgid ""
+"You can also choose a supervisor later. The supervisors in this list have "
+"voted that they are willing to be supervisor for this project"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:724
+msgid "Give a summary of your solution"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:734
+msgid "Give a more detailed description of your solution"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:770
+msgid "Do you want to leave the proposal for now?"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:782
+msgid "Save draft"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:792
+msgid "Submit proposal"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:795
+msgid ""
+"Are you sure you want to submit your proposal now? Once submitted, you "
+"cannot edit it anymore."
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:813
+msgid "your institute"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:824
+msgid "Invitation to join the VALS Semester of code"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:828
+msgid "Email of the person to invite"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:829
+msgid "This can be a comma-separated list of addresses"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:836;871
+msgid "Message"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:844
+msgid "Send"
+msgstr ""
+
+#: includes/module/vals_soc.forms.inc:882
+msgid "Post"
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:14;120
+msgid "Semester of Code Admin"
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:30
+msgid "This is no valid key you entered."
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:51;60
+msgid "An internal program error occured. "
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:51
+msgid "No code is entered"
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:60
+msgid "No valid code is entered"
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:69;223
+msgid "An internal program error occured."
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:110;239
+msgid "We could not update the profile."
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:169
+msgid "Organisation administrator"
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:173
+msgid "Institution administrator"
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:191
+msgid "In this phase, we just give you the code: "
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:292
+msgid "Please Enter a valid email address or leave blank"
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:308
+msgid "Sending queued test emails to "
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:312
+msgid "Sending NON queued test emails to "
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:324
+msgid "You have not sufficient rights to submit this form"
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:353
+msgid "You have succesfully added your organisation to the Semester of Code."
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:355;359
+msgid "We could not add your organisation."
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:392
+msgid "You have succesfully added your institute to the Semester of Code."
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:395;399
+msgid "We could not add your institute."
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:415
+msgid "You have not registered yourself for a specific institute. "
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:416
+msgid "You can change that in your "
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:417
+msgid "profile"
+msgstr ""
+
+#: includes/module/vals_soc.handle_forms.inc:454
+msgid "You have succesfully added your group to the Semester of Code."
+msgstr ""
+
+#: includes/module/vals_soc.mail.inc:130;137
+msgid "Organisation application for VALS summer of code"
+msgstr ""
+
+#: includes/module/vals_soc.mail.inc:142
+msgid "Welcome mentor to the VALS summer of code"
+msgstr ""
+
+#: includes/module/vals_soc.mail.inc:147
+msgid "Welcome student to the VALS summer of code"
+msgstr ""
+
+#: includes/module/vals_soc.mail.inc:152;157
+msgid "Your project proposal to the VALS summer of code"
+msgstr ""
+
+#: includes/module/vals_soc.mail.inc:206
+msgid ""
+"VALS Notification: A prospective mentor has set a proposal status for a "
+"project"
+msgstr ""
+
+#: includes/module/vals_soc.mail.inc:230
+msgid "VALS Proposal Notification"
+msgstr ""
+
+#: includes/module/vals_soc.mail.inc:237;245
+msgid ""
+"unable to send supervisor proposal notification email: missing email or "
+"username"
+msgstr ""
+
+#: includes/module/vals_soc.mail.inc:259
+msgid "vals_soc_handle_cron_test_emails called"
+msgstr ""
+
+#: includes/module/vals_soc.mail.inc:36
+msgid "debug"
+msgstr ""
+
+#: includes/module/vals_soc.mail.inc:36
+msgid "Problem sending email."
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:37
+msgid "An existing proposal has been updated by one of your students."
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:39
+msgid "A new proposal has been published by one of your students."
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:44
+msgid "An existing proposal has been updated for one of your projects."
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:46
+msgid "A new proposal has been published for one of your projects."
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:51;151;271
+msgid "Hello"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:57
+msgid "Here is an overview..."
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:61;285
+msgid "Project idea"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:67;291
+msgid "Proposal title"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:73;297
+msgid "Proposal synopsis"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:79;303
+msgid "Contact details"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:83;307
+msgid "Student username"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:86;310
+msgid "Student email"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:92;316
+msgid "Student supervisors username"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:95;319
+msgid "Student supervisors email"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:98;322
+msgid "Students Institution"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:104;328
+msgid "Initial mentors username"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:107;331
+msgid "Initial mentors email"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:110;334
+msgid "Initial mentors Organisation"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:120;182;344
+msgid "Many Thanks,"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:122;184;346
+msgid "The VALS team"
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:157
+msgid "The first step is to sign up..."
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:165
+msgid "Fill in your basic details."
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:171
+msgid "Click \"Create New Account\""
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:174
+msgid "You will recieve an email with a one-time login link."
+msgstr ""
+
+#: includes/module/vals_soc.mail_messages.inc:177
+msgid "Follow that link, log in and set your password."
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:11
+msgid "Program Settings"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:14
+msgid "Home"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:20
+msgid "VALS Summer of code"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:74
+msgid "About Vals"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:116
+msgid "Allow Administration on the summer of code module."
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:130
+#: includes/ui/administer/program_settings.inc:44;44
+msgid "Edit Messages"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:135
+msgid "Edit the email messages that are sent to users."
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:149
+#: includes/ui/administer/program_settings.inc:26;26
+msgid "Edit Timeline"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:154
+msgid "Edit the timeline and other settings."
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:170;174
+msgid "Dashboard"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:198
+msgid "Administer"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:203;222;236
+msgid "Administer page"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:244
+msgid "Administer your groups"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:249
+msgid "Administer groups in your institute page"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:264
+msgid "Administer your projects"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:269;282
+msgid "Administer page for projects"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:277
+msgid "Administer your own projects"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:303
+msgid "Projects"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:308
+msgid "Projects page"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:330
+msgid "Organisations page"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:347
+msgid "Institutes"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:352
+msgid "Institutions page"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:370;383;396
+#: includes/ui/dashboard/studentlayout.inc:84;84
+msgid "Proposals"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:418
+msgid "My Proposals"
+msgstr ""
+
+#: includes/module/vals_soc.menus.inc:423
+msgid "My Proposal page"
+msgstr ""
+
+#: includes/ui/administer/program_settings.inc:11
+msgid "Program settings"
+msgstr ""
+
+#: includes/ui/administer/program_settings.inc:46
+msgid ""
+"Here you can specify the format of emails that are sent to users of the "
+"program"
+msgstr ""
+
+#: includes/ui/comments/threaded_comments.inc:27
+msgid "hide"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:15
+#: includes/ui/dashboard/studentlayout.inc:16
+msgid "Main dashboard"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:30;30
+#: includes/ui/dashboard/supervisorlayout.inc:32
+msgid "My institution"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:32
+msgid "Institution for which you are an administrator"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:42;42
+#: includes/ui/dashboard/supervisorlayout.inc:44;44
+msgid "Members of my institution"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:44
+msgid "Lists of your institution members"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:78;78
+#: includes/ui/dashboard/supervisorlayout.inc:64;64
+msgid "Groups"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:80
+#: includes/ui/dashboard/supervisorlayout.inc:66
+msgid ""
+"Create groups of students to manage codes and the initial supervisor-student "
+"relation."
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:82
+#: includes/ui/dashboard/supervisorlayout.inc:68
+msgid "Create Groups"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:82
+#: includes/ui/dashboard/supervisorlayout.inc:68
+msgid "Create and see your list of groups"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:83;83
+#: includes/ui/dashboard/supervisorlayout.inc:69;69
+msgid "Manage student groups"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:95;95
+#: includes/ui/dashboard/supervisorlayout.inc:81;81
+msgid "Review project ideas"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:97
+#: includes/ui/dashboard/supervisorlayout.inc:83
+msgid ""
+"Allows you to add comments to project ideas and to filter accidental entries."
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:108
+#: includes/ui/dashboard/supervisorlayout.inc:94
+msgid "Proposals submitted within my institute"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:108
+#: includes/ui/dashboard/supervisorlayout.inc:94
+msgid "Proposals submitted by students from my institute and in my groups"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:110
+#: includes/ui/dashboard/supervisorlayout.inc:96
+msgid "List of proposals submitted within my institute"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:121;121
+#: includes/ui/dashboard/supervisorlayout.inc:107;107
+msgid "Proposals accepted for our institute"
+msgstr ""
+
+#: includes/ui/dashboard/instadminlayout.inc:123
+#: includes/ui/dashboard/supervisorlayout.inc:109
+msgid "List of accepted proposals that are active or will be soon"
+msgstr ""
+
+#: includes/ui/dashboard/mentorlayout.inc:17
+msgid "Mentor dashboard"
+msgstr ""
+
+#: includes/ui/dashboard/mentorlayout.inc:50;50
+msgid "My organisations"
+msgstr ""
+
+#: includes/ui/dashboard/mentorlayout.inc:52
+msgid "List of organisations which I participate in"
+msgstr ""
+
+#: includes/ui/dashboard/mentorlayout.inc:62;62
+#: includes/ui/dashboard/orgadminlayout.inc:60;60
+msgid "Manage your project ideas"
+msgstr ""
+
+#: includes/ui/dashboard/mentorlayout.inc:64
+#: includes/ui/dashboard/orgadminlayout.inc:62
+msgid "Allows you to add and amend project ideas for students."
+msgstr ""
+
+#: includes/ui/dashboard/mentorlayout.inc:85;85
+#: includes/ui/dashboard/orgadminlayout.inc:83;83
+msgid "Members of my organisations"
+msgstr ""
+
+#: includes/ui/dashboard/mentorlayout.inc:87
+#: includes/ui/dashboard/orgadminlayout.inc:85
+msgid "List of your organisations members"
+msgstr ""
+
+#: includes/ui/dashboard/mentorlayout.inc:97;97
+#: includes/ui/dashboard/orgadminlayout.inc:96;96
+msgid "All project ideas (read only)"
+msgstr ""
+
+#: includes/ui/dashboard/mentorlayout.inc:99
+#: includes/ui/dashboard/orgadminlayout.inc:98
+msgid "All project ideas from all organisations"
+msgstr ""
+
+#: includes/ui/dashboard/mentorlayout.inc:109;109
+#: includes/ui/dashboard/orgadminlayout.inc:109;109
+msgid "Proposals submitted to my organisations"
+msgstr ""
+
+#: includes/ui/dashboard/mentorlayout.inc:111
+#: includes/ui/dashboard/orgadminlayout.inc:111
+msgid "List of proposals submitted to my organisations"
+msgstr ""
+
+#: includes/ui/dashboard/mentorlayout.inc:126;126;128
+msgid "Projects I am mentor for"
+msgstr ""
+
+#: includes/ui/dashboard/orgadminlayout.inc:16
+msgid "Organisation Admin dashboard"
+msgstr ""
+
+#: includes/ui/dashboard/orgadminlayout.inc:48;48
+msgid "Managed organisations"
+msgstr ""
+
+#: includes/ui/dashboard/orgadminlayout.inc:50
+msgid "Organizations for which you are an administrator"
+msgstr ""
+
+#: includes/ui/dashboard/orgadminlayout.inc:126;126
+msgid "Projects for my organisations"
+msgstr ""
+
+#: includes/ui/dashboard/orgadminlayout.inc:128
+msgid "List of projects being developed for my organisations"
+msgstr ""
+
+#: includes/ui/dashboard/studentlayout.inc:49
+msgid "Browse Orgs"
+msgstr ""
+
+#: includes/ui/dashboard/studentlayout.inc:49
+msgid "Browse organisations"
+msgstr ""
+
+#: includes/ui/dashboard/studentlayout.inc:51
+msgid "Browse the current list of Organisations"
+msgstr ""
+
+#: includes/ui/dashboard/studentlayout.inc:62;62
+msgid "Browse projects"
+msgstr ""
+
+#: includes/ui/dashboard/studentlayout.inc:64
+msgid "Browse the current list of project ideas"
+msgstr ""
+
+#: includes/ui/dashboard/studentlayout.inc:86
+msgid "List of my proposals"
+msgstr ""
+
+#: includes/ui/dashboard/studentlayout.inc:97;97
+msgid "My project"
+msgstr ""
+
+#: includes/ui/dashboard/studentlayout.inc:99
+msgid "Accepted project I am working on"
+msgstr ""
+
+#: includes/ui/dashboard/supervisorlayout.inc:15
+msgid "Supervisor dashboard"
+msgstr ""
+
+#: includes/ui/dashboard/supervisorlayout.inc:32
+msgid "Details for my institution"
+msgstr ""
+
+#: includes/ui/dashboard/supervisorlayout.inc:34
+msgid "Institution in which you are giving lectures"
+msgstr ""
+
+#: includes/ui/dashboard/supervisorlayout.inc:46
+msgid "Lists of your institution colleagues"
+msgstr ""
+
+#: includes/ui/homepage/news.inc:3
+msgid "News and other information"
+msgstr ""
+
+#: includes/ui/homepage/program.inc:13
+msgid "Program starts"
+msgstr ""
+
+#: includes/ui/homepage/program.inc:14
+msgid ""
+"Organisations and Academic partner admins can login and start to create "
+"their profiles from: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:21
+msgid "Program started on"
+msgstr ""
+
+#: includes/ui/homepage/program.inc:22
+msgid ""
+"Organisations and Academic partner admins can login and start to create "
+"their profile from: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:29
+msgid "Partner signup period starts"
+msgstr ""
+
+#: includes/ui/homepage/program.inc:30
+msgid ""
+"Organisations and Academic partner admins can now login and start to create "
+"their profile."
+msgstr ""
+
+#: includes/ui/homepage/program.inc:32
+msgid ""
+"You have until the following date to complete your Organisation and Academic "
+"partner details: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:39
+msgid "Partner signup ended"
+msgstr ""
+
+#: includes/ui/homepage/program.inc:40;50
+msgid "Organisations and Academic partner registration has ended."
+msgstr ""
+
+#: includes/ui/homepage/program.inc:42
+msgid "Partners announced system wide: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:49
+msgid "Student signup period starts: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:52
+msgid "Student signup period begins: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:59
+msgid "Student signup period"
+msgstr ""
+
+#: includes/ui/homepage/program.inc:63
+msgid "Student signup period ends: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:70;80
+msgid "Student signup period ended"
+msgstr ""
+
+#: includes/ui/homepage/program.inc:71;81;92;105
+msgid "Students can no longer submit project proposals."
+msgstr ""
+
+#: includes/ui/homepage/program.inc:73
+msgid "Organisations review project applications deadline: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:83
+msgid "Mentors and tutors deadline to match accepted projects to mentors: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:91
+msgid "Student signup period ended: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:94
+msgid "Community bonding period soon."
+msgstr ""
+
+#: includes/ui/homepage/program.inc:96
+msgid "Accepted Students and projects announced on: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:104
+msgid "Accepted students now announced."
+msgstr ""
+
+#: includes/ui/homepage/program.inc:107
+msgid "The Bonding period starts on the following date: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:114
+msgid "Community bonding period."
+msgstr ""
+
+#: includes/ui/homepage/program.inc:115
+msgid ""
+"This period is intended to allow all participants to communicate and and ask "
+"questions in advance of actually starting the tasks."
+msgstr ""
+
+#: includes/ui/homepage/program.inc:118
+msgid " Coding starts on the following date: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:126;136
+msgid "Coding period started on"
+msgstr ""
+
+#: includes/ui/homepage/program.inc:127
+msgid "The suggested date students finish their work."
+msgstr ""
+
+#: includes/ui/homepage/program.inc:130;140
+msgid "The deadline date for students to finish their work: "
+msgstr ""
+
+#: includes/ui/homepage/program.inc:137
+msgid "The suggested date students finish their work has expired."
+msgstr ""
+
+#: includes/ui/homepage/program.inc:146 includes/ui/homepage/timeline.inc:261
+msgid "Out of season"
+msgstr ""
+
+#: includes/ui/homepage/program.inc:154
+msgid "Program Inactive"
+msgstr ""
+
+#: includes/ui/homepage/program.inc:155
+msgid "The program is currently inactive."
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:77
+msgid "Remaining"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:81
+msgid "Program Timeline"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:129
+msgid "year"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:132
+msgid "month"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:135
+msgid "day"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:138
+msgid "hour"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:141
+msgid "minute"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:145
+msgid "less than a minute ago"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:185
+msgid "Program starts:"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:191
+msgid "Org Application opens:"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:197
+msgid "Org Application closes:"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:203
+msgid "Accepted Orgs announced on::"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:208
+msgid "Student Application opens:"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:214
+msgid "Student Application closes:"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:220
+msgid "Orgs review applications deadline:"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:226
+msgid "Proposal matched deadline:"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:232
+msgid "Accepted students announced:"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:238
+msgid "Bonding period starts:"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:244
+msgid "Coding period starts:"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:250
+msgid "Suggested coding end:"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:256
+msgid "Coding deadline:"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:267
+msgid "There are currently no active programmes"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:275
+msgid "Off season"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:277
+msgid "Organisation applications"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:279
+msgid "Student applications"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:281
+msgid "Community bonding"
+msgstr ""
+
+#: includes/ui/homepage/timeline.inc:283
+msgid "Students coding"
+msgstr ""

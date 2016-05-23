@@ -1,0 +1,68 @@
+==== SOME notes on maintaining the website ===========
+
+== To upgrade your modules and core versions:==
+
+Go to the reports/status page. you will see the modules to update
+Drupal can update modules and the core (for minor updates) itself, but needs FTP-access for this which we 
+do NOT allow. So instead we make use of the php based command line drupal interface for unix 
+environments: drush.
+
+If you haven't installed drush yet, get it from https://www.drupal.org/node/901828 or better, have a 
+look at http://www.drush.org/en/master/install/
+
+drush rf # Refresh update status information
+
+drush updates <modulename> (The modulename can be found by hovering over the module to be updated in 
+the forementioned screen). For ckeditor it is a bit special (see later)
+
+Suppose your site is in /home/vals/sites/<version YYY>. That is your Drupal root for now. We call it YYY.
+
+Steps: 
+1. Go to Configuration->Develop-> maintenance mode and check the checkbox and save
+2. a) Backup database in a webinterface or otherwise (in HeidiSQL: Create a db 
+vals_vps1_bu_<date> and right-click the database and export to the bu database 
+(choose Output: database, database vals_vps1_bu_<date>, data= insert)
+2. b) Backup the files in YYY/sites or even better back the whole site up: 
+cp -rp YYY/* /home/vals/backups/<YOUR SITE NAME>
+NOTE if you are not working from the default site as specified in YYY/sites/default/.... 
+you have to specify which site you are working in by the option -l (http://)vpsdev.semesterofcode.com 
+NOTE you can speed up the process by providing the -y option to skip confirm dialogues
+NOTE It seems that the current drush, performs database updates automatically, so you do not have to 
+run update.php separately
+2. c) First go to the directory: so cd /home/vals/production2
+3. drush --update-backend (will do a self update on drush) and then 
+   drush -l vps2.semesterofcode.com rf # Refresh update status information
+4. drush -l vps2.semesterofcode.com  up drupal (NB Check that the settings file hasn't changed by 
+comparing the settings.default.php with your own settings.php (you can do that by running :
+diff default/default.settings.php vps2.semesterofcode.com/settings.php | more. If settings are added, you should add
+them to your custom settings as well.
+5. drush up ctools
+6. drush up ...others to be modified (jquery_update, ctools...)
+7. The drush way to move up ckeditor deletes some files that are needed. So either you can copy the 
+changed files over the old ones
+(see below **) OR you can copy from the backups the missing files (ckeditor.js amongst others)
+7* drush up ckeditor (see below at *)
+8. cp -rp backups/sites/all/modules/contrib/ckeditor/ckeditor/* xxx/ OR get the newest version from the 
+ckeditor.com site and wget it in the ckeditor subdir
+9. If the drupal core is updated, the themes directory will be reset to its original. Copy the front page 
+template from the backups:
+cp -p /home/vals/sites/backups/production/themes/bartik/templates/page--front.tpl.php  themes/bartik/templates/ to the corresponding location in your install
+10 To update your database, you can go to your site/update.php or you can run drush dbupdate BUT if you ran 
+the drush up that is equivalent to an upgrade code + dbupdate so then this is not necessary
+11 Upgrading has the side effect that the root becomes the owner and group of the files. To recover from 
+that: chown -R vals:www-data * from the site root.
+12. You can also subtract the read/access rights by others:
+ chmod -R o-rx *
+13. The index.php file in the root has been reset to the old one. Copy from <Vals_soc>/index.php Note that in some
+installations the index.php has been copied already to index.php.bak to make life easier.
+
+** NB Before we tried to directly get the whole drupal module, but it needs a lib that you should get 
+from somewhere else.
+7. 
+a Go to ckeditor release page
+b. Copy the <url> of the tar gz file: <F>
+c. create a dir X (say /home/vals/download) and wget <url>
+d. md5sum <F> and check it is the same as stated in the release notes
+e. tar -xzf <F>
+f. diff X/F sites/all/modules/contrib/ckeditor and see if there is anything special
+g. copy the contents of X/F to ckeditor: cp -rp /home/vals/download/ckeditor/* .

@@ -1,0 +1,194 @@
+/*////////////////
+
+  Iconic Dashboard
+
+////////////////*/
+.dashboard {
+  min-height: 500px;
+}
+.dashboard.disabled {
+  /* disabled dashboard */
+
+  display: none;
+}
+.dashboard-head {
+  /* dashboard head or title */
+
+  border-top: 1px solid #238BD2;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.7em;
+  margin-bottom: 0;
+  color: #238BD2;
+  margin-top: 1.2em;
+}
+.dashboard-head span {
+  background-color: #F6F6F6;
+  color: #238BD2;
+  left: 0;
+  padding-right: 0.4em;
+  position: relative;
+  top: -0.8em;
+}
+.block-dashboard {
+  /* admin dashboard container */
+
+  display: inline-block;
+  width: 100%;
+}
+.block-dashboard .column {
+  /* column for admin dashboard that take half block-dashboard */
+
+  float: right;
+  width: 50%;
+}
+.block-dashboard .column.first {
+  /* first column */
+
+  float: left;
+  width: 50%;
+}
+.block-dashboard .column .column-entry {
+  /* entry inside column that hold iconic information */
+
+  background-position: 4px 4px;
+  background-repeat: no-repeat;
+  margin: 1.3em 0;
+  padding: 2px 4px 2px 34px;
+}
+.block-dashboard .column .column-entry:hover {
+  background-color: #E0F1FC;
+}
+.block-dashboard .column .column-entry div,
+.block-dashboard .column .column-entry h4,
+.block-dashboard .column .column-entry p {
+  padding-left: 10px;
+}
+#main .column-entry h4 {
+  /* title for column-entry */
+
+  background: transparent;
+  font-size: 110%;
+  font-weight: bold;
+  line-height: normal;
+  padding: 0 0 0 10px;
+  text-transform: none;
+}
+#main .column-entry p {
+  /* description of column-entry */
+
+  margin-bottom: 0;
+}
+#main .column-entry div {
+  /* container for column-entry's sublinks */
+
+  color: #999;
+  font-size: 10px;
+}
+/* icons entry */
+.column-entry.lookup_profile {
+  background-image: url("../images/lookup.png");
+}
+.column-entry.allocate_slots,
+.column-entry.slots_allocation {
+  background-image: url("../images/allocate.png");
+}
+.column-entry.slots_transfer {
+  background-image: url("../images/transfer.png");
+}
+.column-entry.duplicates {
+  background-image: url("../images/duplicates.png");
+}
+.column-entry.manage_proposals,
+.column-entry.proposals,
+.column-entry.proposals_submitted {
+  background-image: url("../images/proposals.png");
+}
+.column-entry.accept_proposals,
+.column-entry.manage_projects,
+.column-entry.mentoring_projects {
+  background-image: url("../images/accept_proposals.png");
+}
+.column-entry.withdraw_projects {
+  background-image: url("../images/withdraw.png");
+}
+.column-entry.reminder_emails {
+  background-image: url("../images/mail.png");
+}
+.column-entry.edit_program,
+.column-entry.program_settings {
+  background-image: url("../images/settings.png");
+}
+.column-entry.edit_timeline {
+  background-image: url("../images/date.png");
+}
+.column-entry.adminning_organizations,
+.column-entry.manage_organizations,
+.column-entry.participants,
+.column-entry.students {
+  background-image: url("../images/users.png");
+}
+.column-entry.participant_locations {
+  background-image: url("../images/marker.png");
+}
+.column-entry.report_statistic {
+  background-image: url("../images/report.png");
+}
+.column-entry.documents,
+.column-entry.evaluations,
+.column-entry.mentor_evaluations,
+.column-entry.org_app,
+.column-entry.student_evaluations,
+.column-entry.todo {
+  background-image: url("../images/todo.png");
+}
+.column-entry.evaluation_group {
+  background-image: url("../images/grade.png");
+}
+.column-entry.create_evaluation_group,
+.column-entry.create_mentor_evaluation,
+.column-entry.create_student_evaluation {
+  background-image: url("../images/create.png");
+}
+.column-entry.edit_evaluation_group,
+.column-entry.edit_mentor_evaluation,
+.column-entry.edit_student_evaluation {
+  background-image: url("../images/edit.png");
+}
+.column-entry.projects,
+.column-entry.view_evaluation_group,
+.column-entry.view_mentor_evaluation,
+.column-entry.view_student_evaluation {
+  background-image: url("../images/view.png");
+}
+.column-entry.org_admin_requests,
+.column-entry.requests {
+  background-image: url("../images/requests.png");
+}
+.column-entry.shipment_tracking,
+.column-entry.shipment_infos {
+  background-image: url("../images/shipment_tracking.png");
+}
+.column-entry.create_shipment_info {
+  background-image: url("../images/proposals.png");
+}
+.column-entry.edit_shipment_infos {
+  background-image: url("../images/edit.png");
+}
+.column-entry.sync_data {
+  background-image: url("../images/sync_data.png");
+}
+.column-entry .notificon {
+  /* notify icon */
+
+  background-color: #F03D25;
+  border-color: -moz-use-text-color #dd3822 #dd3822;
+  border-radius: 2px 2px 2px 2px;
+  border-right: 1px solid #DD3822;
+  border-style: none solid solid;
+  border-width: 0 1px 1px;
+  display: inline-block;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 2px 2px 0;
+}

@@ -1,0 +1,248 @@
+<?php
+/*
+ * To modularise the drupal hooks we load in our code as needed using module_load_include
+ * We should only use this file for drupal hooks  
+ * (Otherwise this file will get rather large)
+ * NOTE: module_load_include results in a "require_once" anyway
+ * The functionality that needs to be there always, is included in the standard way.
+ */
+
+module_load_include('php', 'vals_soc', 'includes/settings/settings');
+
+include(_VALS_SOC_ROOT.'/includes/functions/helper_functions.php');
+include(_VALS_SOC_ROOT.'/includes/module/vals_soc.roles.inc');
+include(_VALS_SOC_ROOT.'/includes/classes/AbstractEntity.php');//necessary for forms
+include(_VALS_SOC_ROOT.'/includes/classes/Users.php');//necessary for access checks
+include(_VALS_SOC_ROOT.'/includes/classes/Groups.php');//necessary for forms
+include(_VALS_SOC_ROOT.'/includes/module/vals_soc.forms.inc');
+include(_VALS_SOC_ROOT.'/includes/module/vals_soc.handle_forms.inc');
+
+//***********************************************************************************
+// module hooks automatically loaded by Drupal
+//
+//***********************************************************************************
+
+/**
+ * Function which will check ROLES, PERMISSIONS and the TIMELINE to ascertain
+ * if a menu/page is available for a given user 
+ * @param Array $access_data - the path of the page
+ * @return boolean
+ */
+function vals_soc_access_check($access_data) {
+    module_load_include('inc', 'vals_soc', 'includes/module/vals_soc.access');
+    return pageAccessCheck($access_data);
+}
+
+/**
+ * We define the permissions that can be set for this module
+ * @param unknown $item
+ * @param unknown $roles
+ * @return boolean
+ */
+function vals_soc_permission() {
+    $perms = array();
+    $perms['vals access dashboard'] = array(
+            'title' => t('The user has a dashboard to view data or change things.'),
+            'description' => t('There should be a page available in the dashboard pages section'),
+            'restrict access' => FALSE,
+            //'warning' => t(''),
+    );
+    $perms['vals admin register'] = array(
+            'title' => t('Grant access to administer groups, organisations and institutes.'),
+            'description' => t('There is an admin page where you can add, delete and edit your organisation and groups.'),
+            'restrict access' => FALSE,
+            //'warning' => t(''),
+    );
+    $perms['vals admin projects'] = array(
+            'title' => t('Grant access to register and admin projects.'),
+            'description' => t('Typically for mentors and organisation admins.'),
+            'restrict access' => FALSE,
+            //'warning' => t(''),
+    );
+    $perms['vals browse projects'] = array(
+            'title' => t('Browsing to the projects (read only).'),
+            'description' => t('Non logged in users should be able to browse the projects'),
+            'restrict access' => FALSE,
+            //'warning' => t(''),
+    );
+    $perms['vals apply projects'] = array(
+            'title' => t('Selecting a project and/or submitting a proposal.'),
+            'description' => t('This should be for students and perhaps for supervisors'),
+            'restrict access' => FALSE,
+            //'warning' => t(''),
+    );
+    $perms['vals edit projects'] = array(
+            'title' => t('Editing a project to propose small amendments or suggestions.'),
+            'description' => t('This should be for institute admins and perhaps for supervisors'),
+            'restrict access' => FALSE,
+            //'warning' => t(''),
+    );
+    $perms['vals browse proposals'] = array(
+            'title' => t('Browsing the proposals (read only).'),
+            'description' => t('Non student users should be able to browse the proposals'),
+            'restrict access' => FALSE,
+            //'warning' => t(''),
+    );
+    return $perms;
+}
+
+/**
+ * Implements Drupal hook_block_info().
+ */
+function vals_soc_block_info() {
+	module_load_include('inc', 'vals_soc', 'includes/module/vals_soc.block');
+	return vals_soc_block_info_handler();
+}
+
+/**
+ * Implements Drupal hook_block_view().
+ * @param string $delta
+ * @return multitype:string NULL
+ */
+function vals_soc_block_view($delta = '') {
+	module_load_include('inc', 'vals_soc', 'includes/module/vals_soc.block');
+	return vals_soc_block_view_handler($delta);
+}
+
+
+function vals_soc_cron(){
+	module_load_include('inc', 'vals_soc', 'includes/module/vals_soc.cron');
+	return vals_soc_cron_handler();
+}
+
+/*
+ * Implements Drupal hook_cron_queue_info().
+ */
+function vals_soc_cron_queue_info(){
+	module_load_include('inc', 'vals_soc', 'includes/module/vals_soc.cron');
+	return vals_soc_cron_queue_info_handler();
+}
+
+//***********************************************************************************
+// FORMS
+//***********************************************************************************
+/**
+ * Implements hook_forms().
+ */
+ 
+function vals_soc_forms() {
+  $forms['vals_soc_organisation_form']= array(
+    'callback' => 'vals_soc_organisation_form',
+    'callback arguments' => array('vals_soc_organisation_form'),
+  );
+  $forms['vals_soc_studentgroup_form']= array(
+    'callback' => 'vals_soc_studentgroup_form',
+    'callback arguments' => array('vals_soc_studentgroup_form'),
+  );
+  $forms['vals_soc_institute_form']= array(
+    'callback' => 'vals_soc_institute_form',
+    'callback arguments' => array('vals_soc_institute_form'),
+  );
+  return $forms;
+}
+
+/**
+ * Implements Drupal hook_form_FORM_ID_alter().
+ * @param unknown $form
+ * @param unknown $form_state
+ * @return Ambigous <multitype:string, multitype:string number NULL >
+ */
+function vals_soc_form_user_register_form_alter(&$form, &$form_state) {
+	return vals_soc_form_user_register_form_alter_handler($form, $form_state);
+}
+
+function vals_soc_form_user_profile_form_alter(&$form, &$form_state) {
+	return vals_soc_form_user_profile_form_alter_handler($form, $form_state);
+}
+
+//***********************************************************************************
+// HELP
+//***********************************************************************************
+
+/**
+ * Implements Drupal hook_help().
+ *
+ * Displays help and module information.
+ *
+ * @param path
+ *   Which path of the site we're using to display help
+ * @param arg
+ *   Array that holds the current path as returned from arg() function
+ */
+function vals_soc_help($path, $arg) {
+	switch ($path) {
+		case "admin/help#soc":
+			return '<p>' . t("Show the semester of code block") . '</p>';
+			break;
+	}
+}
+
+//***********************************************************************************
+// General for every page
+//***********************************************************************************
+
+function vals_soc_js_alter(&$javascript) {
+	$ckeditor_path = drupal_get_path('module', 'ckeditor');
+	//$javascript = drupal_add_js($ckeditor_path. '/includes/ckeditor.utils.js');
+	$javascript = drupal_add_js($ckeditor_path. '/ckeditor/ckeditor.js');
+
+  // Swap out jQuery to use an updated version of the library.
+  //$javascript['misc/jquery.js']['data'] = drupal_get_path('module', 'jquery_update') . '/jquery.js';
+}
+
+function vals_soc_css_alter(&$css) {
+	$css = drupal_add_css(_VALS_SOC_PATH . '/includes/css/vals_soc.css', array(
+      'type' => 'file',
+      'group' => CSS_THEME
+    ));
+}
+
+//***********************************************************************************
+// MAIL
+//***********************************************************************************
+/**
+ * Implements Drupal _hook_mail()
+ * 
+ * @param unknown $key
+ * @param unknown $message
+ * @param unknown $params
+ */
+function vals_soc_mail($key, &$message, $params) {
+	module_load_include('inc', 'vals_soc', 'includes/module/vals_soc.mail');
+	return vals_soc_mail_handler($key, $message, $params);
+}
+
+function vals_soc_init(){
+    // we make sure the settings are included first and the migrate as the very last. The latter should be the last one,
+    drupal_session_start();
+	module_load_include('php', 'vals_soc', 'includes/classes/ValsSocMailSystem');
+	
+    $_SESSION['site_settings'] = array('base_url' => _WEB_URL, 'is_logged_in' => Users::isUser(), 'debug' => _DEBUG);
+    drupal_add_js (_VALS_SOC_PATH .'/includes/js/js_settings.php', array('weight'=> -2));
+    drupal_add_js (_VALS_SOC_PATH .'/includes/js/jquery-migrate-1.2.1.js', array('weight'=> 3));
+}
+/**
+ * Implements Drupal _hook_mail_alter()
+ * 
+ * @param unknown $message
+ */
+function vals_soc_mail_alter(&$message) {
+    //module_load_include('inc', 'vals_soc', 'includes/module/vals_soc.mail');
+    //return vals_soc_mail_alter_handler($message);
+}
+
+
+//***********************************************************************************
+// MENUS
+//***********************************************************************************
+
+/**
+ * Implements Drupal _hook_menu()
+ *
+ * include menu handler file and call the handler function
+ * @return multitype:string multitype:string  multitype:string multitype:string
+ */
+function vals_soc_menu(){
+    module_load_include('inc', 'vals_soc', 'includes/module/vals_soc.menus');
+    return vals_soc_menu_handler();
+}

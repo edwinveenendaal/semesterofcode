@@ -1,0 +1,274 @@
+<?php
+
+/**
+ * Implements Drupal hook_install().
+ */
+function vals_soc_install(){
+    //If we just run a script directly on the database server before we switch
+    //on this module, we just read the script and run it
+    if (_INSTALL_BY_SCRIPT){
+        try {
+            install_by_script();
+        } catch (Exception $e){
+            echo $e->getMessage();
+            die('Your settings file in the vals_soc module enables the install by script (_INSTALL_BY_SCRIPT), but the application seems already installed. Set it to FALSE.');
+        }
+    } else {
+        //Do it the Drupal way
+        try { 
+            $tables = vals_socTables();
+            foreach ($tables as $t){
+                drupal_install_schema('vals_soc', $t);
+            }
+            create_roles();
+            create_permissions();
+            create_codes();
+        } catch (\Exception $e) {
+            die('During installation an error occurred: '.$e->getMessage());
+        }
+    }
+}
+
+function install_by_script() {
+  // Get the contents of the .sql file.
+  $sql = file_get_contents(_VALS_SOC_ROOT. '/installation/db/drupal_soc.sql');
+  // Split into individual statements based on new lines.
+  $statements = preg_split('/[\n\r]+/', $sql);
+
+  foreach ($statements as $query) {
+    db_query($query);
+  }
+}
+/**
+ * Implements hook_uninstall().
+ */
+function vals_soc_uninstall() {
+  $stored_vars = array(
+      'vals_timeline_program_available',
+      'vals_timeline_program_start_date',
+      'vals_timeline_program_end_date',
+      'vals_timeline_org_app_start_date',
+      'vals_timeline_org_app_end_date',
+      'vals_timeline_accepted_org_announced_date',
+      'vals_timeline_student_signup_start_date',
+      'vals_timeline_student_signup_end_date',
+      'vals_timeline_org_review_student_applications_date',
+      'vals_timeline_students_matched_to_mentors_deadline_date',
+      'vals_timeline_accepted_students_announced_deadline_date',
+      'vals_timeline_accepted_org_announced_date',
+      'vals_timeline_students_start_submit_forms_date',
+      'vals_timeline_coding_start_date',
+      'vals_timeline_suggested_coding_deadline',
+      'vals_timeline_coding_end_date',
+      
+      'vals_accepted_organisations_message',
+      'vals_accepted_students_message',
+      'vals_mentor_welcome_message',
+      'vals_messages_test_cron_email',
+      'vals_messages_test_email',
+      'vals_rejected_organisations_message',
+      'vals_rejected_students_message',
+      'vals_student_welcome_message'
+    );
+  
+  foreach ($stored_vars as $var){
+      variable_del($var);
+  }
+  // Delete tables.
+    $tables = array(
+        'soc_agreements',
+        'soc_codes',
+        'soc_comments',
+        'soc_institutes',
+        'soc_names',
+        'soc_organisations',
+        'soc_projects',
+        'soc_proposals',
+        'soc_studentgroups',
+        'soc_student_favourites',
+        'soc_supervisor_rates',
+        'soc_user_membership'
+    );
+    
+	foreach ($tables as $table) {
+        if (db_table_exists($table)) {
+            db_drop_table($table);
+        }
+    }
+	db_query("DELETE FROM role WHERE rid > "._USER_ROLE_ID);
+  	menu_cache_clear_all();
+}
+
+function vals_soc_enable() {
+  $current = variable_get('mail_system', array('default-system' => 'DefaultMailSystem'));
+  $addition = array('vals_soc' => 'ValsSocMailSystem');
+  variable_set('mail_system', array_merge($current, $addition));
+}
+
+function vals_soc_disable() {
+  $mail_system = variable_get('mail_system', array('default-system' => 'DefaultMailSystem'));
+  unset($mail_system['vals_soc']);
+  variable_set('mail_system', $mail_system);
+}
+
+/**
+ * Implements Drupal hook_schema()
+ * We create a schema which can be read by drupal's schema_install and used by drupal's create_tables
+ *
+ * @return multitype:string NULL
+ */
+function vals_soc_schema() {
+//TODO: uncomment the function in the schema and revise the tables. During an install this function will be called
+	//module_load_include('inc', 'vals_soc', 'includes/module/vals_soc.schema');
+	//return vals_soc_schema_handler();
+}
+
+/**
+* Create new database table {soc_studentgroups}.
+*/
+function vals_soc_DONOTDOTHISupdate_7101() {
+  $schema['soc_studentgroups'] = array(
+    'description' => 'The students will be divided in groups, each teacher probably having one or more groups',
+    'fields' => array(
+        'studentgroup_id' => array(
+            'description' => 'Group id.',
+            'type' => 'serial',
+            'length' => 'small',
+            'not null' => TRUE,
+        ),
+        'name' => array(
+            'description' => 'The name of the group to remind.',
+            'type' => 'varchar',
+            'length' => 255,
+            'not null' => TRUE,
+        ),
+        'description' => array(
+            'description' => 'Some description or comment',
+            'type' => 'varchar',
+            'length' => 512,
+            'not null' => FALSE,
+            'default' => '',
+        ),
+        'teacher' => array(
+            'description' => 'The id of the teacher',
+            'type' => 'int',
+            'length' => 'medium',
+            'not null' => TRUE,
+        ),
+    ),
+    'primary key' => array('studentgroup_id'),
+	);
+  db_create_table('soc_studentgroups', $schema['soc_studentgroups']);
+}
+
+function vals_soc_DONOTDOTHISupdate_7102() {//every new field has description, type, not null
+	$new_field = array(
+            'description' => 'The description of the project.',
+            'type' => 'text',
+            'not null' => FALSE,
+	);	
+	db_change_field('soc_projects', 'description', 'description', $new_field);
+}
+
+function vals_soc_DONOTDOTHISupdate_7103(){
+/*
+ALTER TABLE `soc_institutes` ADD `owner_id` INT NOT NULL AFTER `inst_id`
+ALTER TABLE `soc_projects` ADD `owner_id` INT NOT NULL AFTER `pid`
+ALTER TABLE `soc_studentgroups` ADD `owner_id` INT NOT NULL AFTER `studentgroup_id`
+ALTER TABLE `soc_organisations` ADD `owner_id` INT NOT NULL AFTER `org_id`
+NOt yet reflected in drupal_soc.sql
+
+*/
+}
+
+function vals_soc_DONOTDOTHISupdate_7104() {
+//	$new_field = array(
+	//	'description' => 'The description of the project.',
+	//	'type' => 'text',
+	//	'not null' => FALSE,
+	//);	
+	//db_change_field('soc_projects', 'description', 'description', $new_field);
+	
+	//This is what should happen
+	//ALTER TABLE `soc_names` CHANGE `name` `name` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+}
+
+/**
+* Create new database table {soc_student_favourites}. in svn version 0.5.5. The 05 follow up is coincidence
+  and has nothing to do with the svn version. Currently we are in version 7.x.1.2
+*/
+function vals_soc_update_7105() {
+    $schema['soc_student_favourites'] = array(
+        'description' => 'The students will mark some projects as their favourites',
+        'fields' => array(
+                'favour_id' => array(
+                    'description' => 'favourite auto id.',
+                    'type' => 'serial',
+                    'length' => 'small',
+                    'not null' => TRUE,
+                ),
+                'uid' => array(
+                    'description' => 'the student uid.',
+                    'type' => 'int',
+                    'unsigned' => TRUE,
+                    'not null' => TRUE,
+                ),
+                'pid' => array(
+                    'description' => 'The project id',
+                    'type' => 'int',
+                    'unsigned' => TRUE,
+                     'not null' => TRUE,
+                )
+        ),
+	'primary key' => array('favour_id'),
+    );
+    db_create_table('soc_student_favourites', $schema['soc_student_favourites']);
+}
+//The following updates have been performed in all databases
+function vals_soc__DONOTDOTHISupdate_7106(){
+	$spec = array(
+		'type' => 'enum',//DOES NOT EXIST as generic type
+		'not null' => TRUE,
+		'default' => 'draft'
+	);
+	//db_change_field('soc_proposals', 'state', 'state', $spec);
+	//ALTER TABLE `soc_proposals` CHANGE `state` `state` ENUM( 'draft', 'published', 'accepted', 'rejected', 'finished', 'archived', 'open', 'retracted' ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+	db_query("ALTER TABLE `soc_proposals` CHANGE `state` `state` ENUM( 'draft', 'open', 'published', 'accepted', ".
+		"'rejected', 'finished', 'archived', 'retracted' ) CHARACTER SET utf8 COLLATE utf8_general_ci ".
+		"NOT NULL")->execute();
+	}
+	
+	function vals_soc__DONOTDOTHISupdate_7107(){
+		db_query("ALTER TABLE `soc_proposals` ADD `reason` VARCHAR( 512 ) NULL COMMENT 'reason for rejection or withdraw' AFTER `state`")->execute();
+	}
+	
+	//Done in 0.5.6
+	function vals_soc__DONOTDOTHISupdate_7108(){
+		db_query("ALTER TABLE `soc_projects`".
+			"ADD COLUMN `views` SMALLINT UNSIGNED NULL DEFAULT '0' AFTER `selected`,".
+			"ADD COLUMN `likes` SMALLINT UNSIGNED NULL DEFAULT '0' AFTER `views`")->execute();
+	}
+	
+    //To be done in 0.5.7
+    function vals_soc___DONOTDOTHISupdate_7109(){
+        db_query("ALTER TABLE `soc_agreements`
+            ADD COLUMN `student_completed` TINYINT NULL DEFAULT '0' COMMENT 'Whether the project is signed as finished by the student' AFTER `mentor_signed`");
+        db_query("ALTER TABLE `soc_agreements`
+            ADD COLUMN `supervisor_completed` TINYINT NULL DEFAULT '0' COMMENT 'Whether the project is signed as finished by the supervisor' AFTER `student_completed`");
+
+        db_query("ALTER TABLE `soc_agreements`
+            ADD COLUMN `mentor_completed` TINYINT NULL DEFAULT '0' COMMENT 'Whether the project is signed as finished by the mentor' AFTER `supervisor_completed`");
+
+        db_query("ALTER TABLE `soc_agreements`
+            ADD COLUMN `evaluation` TEXT NULL COMMENT 'Space for evaluation text' AFTER `mentor_completed`");
+    }
+    
+    //To be done in version 0.5.9
+    function vals_soc_update_7110(){
+        db_query("ALTER TABLE `soc_projects`
+            ADD COLUMN `available` TINYINT(4) NOT NULL DEFAULT '0' AFTER `state`,
+            ADD COLUMN `begin` INT(11) NULL DEFAULT NULL AFTER `available`,
+            ADD COLUMN `end` INT(11) NULL DEFAULT NULL AFTER `begin`");
+    }
+		
+	 
